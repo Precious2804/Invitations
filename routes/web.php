@@ -18,6 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 })->name('/');
 
+
 Route::get('auth.complete-verification', [MainController::class, 'completeVerification'])->name('complete-verification');
 Route::get('auth.login', [MainController::class, 'login'])->name('login');
 Route::get('auth.register', [MainController::class, 'register'])->name('register');
