@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\MainController;
 use App\Models\User;
 use Illuminate\Auth\Events\PasswordReset;
@@ -30,7 +31,8 @@ Route::get('auth.login', [MainController::class, 'login'])->name('login');
 Route::get('auth.register', [MainController::class, 'register'])->name('register');
 Route::post('/do-register', [MainController::class, 'doRegister'])->name('do-register');
 Route::post('/do-login', [MainController::class, 'doLogin'])->name('do-login');
-Route::get('/create_invite', [MainController::class, 'create_invite'])->name('create_invite');
+Route::get('/select_design', [MainController::class, 'select_design'])->name('select_design');
+Route::get('/create_invite/{temp_id}', [MainController::class, 'create_invite'])->name('create_invite');
 
 Route::group(['middleware' => ['auth']], function () {
     Route::get('/dashboard', [MainController::class, 'dashboard'])->name('dashboard');
@@ -40,7 +42,14 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('/change_password', [MainController::class, 'change_password'])->name('change_password');
 });
 
+// AdminController routes
+Route::group(['middleware' => ['is_admin']], function () {
+    Route::get('admin.dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
+    Route::get('admin.save_temp', [AdminController::class, 'save_temp'])->name('save_temp');
+    Route::post('/save_now', [AdminController::class, 'save_now'])->name('save_now');
+});
 
+// Routes for forgot and reset password
 Route::get('/password.request', function () {
     return view('auth.forgot');
 })->name('password.request');
@@ -63,7 +72,7 @@ Route::post('/forgot-password', function (Request $request) {
 
 Route::get('auth.reset-password/{token}', function (Request $request, $token) {
     $bnn = ['token' => $token];
-    $email = ['email'=> $request->email];
+    $email = ['email' => $request->email];
     return view('auth.reset-password')->with($bnn)->with($email);
 })->name('password.reset');
 
@@ -96,4 +105,3 @@ Route::post('/reset-password', function (Request $request) {
             : back()->withErrors(['email' => [__($status)]]);
     }
 })->name('password.update');
-

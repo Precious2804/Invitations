@@ -120,7 +120,7 @@
                                 <a href="contact.html">Contact</a>
                             </li>
                             <li class="pr-0">
-                                <a href="{{route('create_invite')}}" class="custom-button">Start Exploring</a>
+                                <a href="{{route('select_design')}}" class="custom-button">Start Exploring</a>
                             </li>
                         </ul>
                         <div class="header-bar d-lg-none">

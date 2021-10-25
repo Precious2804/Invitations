@@ -67,6 +67,7 @@
                         </a>
                     </div>
                     <ul class="dashboard-menu">
+                        @if($loggedUserInfo)
                         <li>
                             <a href="{{route('dashboard')}}" class="active"><i class="fas fa-tachometer-alt"></i>Dashboard</a>
                         </li>
@@ -74,7 +75,7 @@
                             <a href="{{route('profile')}}"><i class="fas fa-user"></i>Profile</a>
                         </li>
                         <li>
-                            <a href="{{route('create_invite')}}"><i class="fas fa-plus-square"></i>Create Invites</a>
+                            <a href="{{route('select_design')}}"><i class="fas fa-plus-square"></i>Create Invites</a>
                         </li>
                         <li>
                             <a href=""><i class="fas fa-mail-bulk"></i>Saved Invites</a>
@@ -85,6 +86,17 @@
                         <li>
                             <a href="{{route('logout')}}"><i style="color: red;" class="fas fa-sign-out-alt"></i>Logout</a>
                         </li>
+                        @else
+                        <li>
+                            <a href="{{route('/')}}" class=""><i class=""></i>Go to Home</a>
+                        </li>
+                        <li>
+                            <a href="{{route('select_design')}}"><i class="fas fa-plus-square"></i>Create Invites</a>
+                        </li>
+                        <li>
+                            <a href="{{route('login')}}"><i class="fas fa-lock"></i>Sign In</a>
+                        </li>
+                        @endif
                     </ul>
                 </div>
             </div>
@@ -118,9 +130,9 @@
                                             <a href="#0" class="author">
                                                 <div class="thumb">
                                                     @if($loggedUserInfo['picture'] == NULL)
-                                                    <img src="{{URL::asset('assets/images/dashboard/user.png')}}" alt="{{env('APP_NAME')}}">
+                                                    <img src="{{URL::asset('assets/images/dashboard/user.png')}}" alt="{{env('APP_NAME')}}" width="100%">
                                                     @else
-                                                    <img src="{{$loggedUserInfo['picture']}}" alt="{{env('APP_NAME')}}">
+                                                    <img src='{{URL::asset($loggedUserInfo["picture"])}}' alt="{{env('APP_NAME')}}" width="100%">
                                                     @endif
                                                     <span class="checked">
                                                         <i class="flaticon-checked"></i>
@@ -156,8 +168,8 @@
                                         </li>
                                         @else
                                         <li>
-                                            <a href="">
-                                                <button type="submit" class="custom-button border-0">Sign In</button>
+                                            <a href="{{route('login')}}">
+                                                <button type="submit" class="custom-button border-0"><i class="fas fa-lock"></i>Sign In</button>
                                             </a>
                                         </li>
                                         @endif

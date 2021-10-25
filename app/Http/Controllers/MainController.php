@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\EmailVerifyToken;
+use App\Models\Templates;
 use App\Models\User;
 use App\Notifications\VerifyEmailNotification;
 use App\Rules\MatchOldPassword;
@@ -157,9 +158,18 @@ class MainController extends Controller
         return back()->with('success', "Your Password was Updated successfully");
     }
 
-    public function create_invite()
+    public function select_design()
     {
+        $page = 'select_design';
+        $templates = ['templates'=>Templates::all()];
+        return $this->dynamicPages($page)->with($templates);
+    }
+
+    public function create_invite($temp_id)
+    {   
+        $select_temp = ['select_temp'=>Templates::where('temp_id', $temp_id)->first()];
+
         $page = 'create_invite';
-        return $this->dynamicPages($page);
+        return $this->dynamicPages($page)->with($select_temp);
     }
 }

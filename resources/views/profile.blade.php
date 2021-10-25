@@ -24,9 +24,9 @@ $page = 'Profile Settings'
                     <div class="d-flex align-items-center mb-30">
                         <div class="update_user">
                             @if($loggedUserInfo['picture'] == NULL)
-                            <img src="{{URL::asset('assets/images/dashboard/user.png')}}" alt="dashboard">
+                            <img src="{{URL::asset('assets/images/dashboard/user.png')}}" width="100%" alt="dashboard">
                             @else
-                            <img src="{{$loggedUserInfo['picture']}}" alt="Profile picture">
+                            <img src='{{URL::asset($loggedUserInfo["picture"])}}' alt="{{env('APP_NAME')}}" width="100%">
                             @endif
                         </div>
                         <div class="pl-3">
