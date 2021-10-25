@@ -30,7 +30,15 @@ Route::get('auth.login', [MainController::class, 'login'])->name('login');
 Route::get('auth.register', [MainController::class, 'register'])->name('register');
 Route::post('/do-register', [MainController::class, 'doRegister'])->name('do-register');
 Route::post('/do-login', [MainController::class, 'doLogin'])->name('do-login');
+Route::get('/create_invite', [MainController::class, 'create_invite'])->name('create_invite');
 
+Route::group(['middleware' => ['auth']], function () {
+    Route::get('/dashboard', [MainController::class, 'dashboard'])->name('dashboard');
+    Route::get('/logout', [MainController::class, 'logout'])->name('logout');
+    Route::get('/profile', [MainController::class, 'profile'])->name('profile');
+    Route::post('/update_profile', [MainController::class, 'update_profile'])->name('update_profile');
+    Route::post('/change_password', [MainController::class, 'change_password'])->name('change_password');
+});
 
 
 Route::get('/password.request', function () {

@@ -120,7 +120,7 @@
                                 <a href="contact.html">Contact</a>
                             </li>
                             <li class="pr-0">
-                                <a href="{{route('register')}}" class="custom-button">Join Us</a>
+                                <a href="{{route('create_invite')}}" class="custom-button">Start Exploring</a>
                             </li>
                         </ul>
                         <div class="header-bar d-lg-none">
@@ -731,7 +731,7 @@
                                     <div class="invest-amount" data-min="1.00 USD" data-max="1000 USD">
                                         <div id="usd-range" class="invest-range-slider"></div>
                                     </div>
-                                    <button type="submit" class="custom-button">join now</button>
+                                    <button type="submit" class="custom-button">Get Started</button>
                                 </div>
                             </div>
                             <div class="tab-item active">

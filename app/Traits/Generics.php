@@ -3,11 +3,22 @@
 namespace App\Traits;
 
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 
 trait Generics
 {
+    //with Authentication
+    function dynamicPages($page){
+        if(Auth::user() == ""){
+            $user = ['loggedUserInfo'=>[]];
+        } else{
+            $user = ['loggedUserInfo'=>User::where('user_id', Auth::user()->user_id)->first()];
+        }
+        return view($page)->with($user);
+    }
+
     // a function that generates a random unique ID
     function generateId()
     {

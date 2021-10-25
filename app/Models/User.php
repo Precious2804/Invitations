@@ -21,6 +21,7 @@ class User extends Authenticatable
         'user_id',
         'username',
         'email',
+        'phone',
         'fullname',
         'isAdmin',
         'isVerified',

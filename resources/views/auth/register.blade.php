@@ -14,7 +14,7 @@
         <div class="account-wrapper">
             <div class="account-header">
                 <h4 class="title">Let's get started</h4>
-                <a href="#0" class="sign-in-with"><img src="{{URL::asset('assets/images/icon/google.png')}}" alt="icon"><span>Sign Up with Google</span></a>
+                <a href="#0" class="sign-in-with"><img src="{{URL::asset('assets/images/icon/google.png')}}" alt="icon"><span>Sign In with Google</span></a>
             </div>
             <div class="or">
                 <span>OR</span>

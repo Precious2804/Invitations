@@ -5,10 +5,12 @@ namespace App\Http\Controllers;
 use App\Models\EmailVerifyToken;
 use App\Models\User;
 use App\Notifications\VerifyEmailNotification;
+use App\Rules\MatchOldPassword;
 use App\Traits\Generics;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use PhpParser\Node\Expr\Match_;
 
 class MainController extends Controller
 {
@@ -73,8 +75,8 @@ class MainController extends Controller
     public function doLogin(Request $req)
     {
         $req->validate([
-            'email'=>'required|email',
-            'password'=>'required'
+            'email' => 'required|email',
+            'password' => 'required'
         ]);
         $user = User::where('email', $req->email)->first();
         if (User::where('email', $req->email)->exists() == true) {
@@ -100,5 +102,64 @@ class MainController extends Controller
         } else {
             return redirect()->back()->with('infoEmail', 'Email address does not exist!, please check your credentials and try again.');
         }
+    }
+
+    public function logout()
+    {
+        Auth::logout();
+        return redirect('auth.login')->with('out', "Logout was Successfull");
+    }
+
+    public function dashboard()
+    {
+        $page = 'dashboard';
+        return $this->dynamicPages($page);
+    }
+    public function profile()
+    {
+        $page = 'profile';
+        return $this->dynamicPages($page);
+    }
+
+    public function update_profile(Request $req)
+    {
+        $user = User::where('user_id', Auth::user()->user_id)->first();
+        $req->validate([
+            'picture' => 'mimes:png,jpg,jpeg,gif,svg|max:2048'
+        ]);
+        if ($req->file()) {
+            $name = time() . '_' . $req->picture->getClientOriginalName();
+            $filePath = $req->file('picture')->storeAs('uploads', $name, 'public');
+
+            $user->picture = '/storage/' . $filePath;
+            $user->username = $req->username;
+            $user->fullname = $req->fullname;
+            $user->email = $req->email;
+            $user->phone = $req->phone;
+            $user->save();
+
+            return back()->with('updated', "Profile Update was Successfull!");
+        }
+    }
+
+    public function change_password(Request $request)
+    {
+        $request->validate([
+            'current_password' => ['required', new MatchOldPassword],
+            'password' => 'required|confirmed|min:6'
+        ]);
+
+        $user = User::where('user_id', Auth::user()->user_id)->first();
+        $user->update([
+            'password' => Hash::make($request->password)
+        ]);
+
+        return back()->with('success', "Your Password was Updated successfully");
+    }
+
+    public function create_invite()
+    {
+        $page = 'create_invite';
+        return $this->dynamicPages($page);
     }
 }
