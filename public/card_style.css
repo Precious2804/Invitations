@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;500;600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    scroll-behavior: smooth;
+    line-height: 2.0;
+    font-family: 'Poppins', sans-serif;
+}
+
+main {
+    padding: 4rem;
+    background-color: #efefef;
+}
+
+.section-flexed {
+    /* display: flex;
+    justify-content: space-around; */
+    /* display: grid; */
+    grid-gap: 5rem;
+    grid-template-columns: 1fr 1fr;
+}
+
+#myDiv {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+	padding: 1rem;
+}
+
+.form-div {
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    padding: 1.5rem;
+}
+
+.result-div {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    /* height: 100%; */
+    /* border: 2px solid black; */
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+.toolbar {}
+.tool-list {
+	display: flex;
+	flex-flow: row nowrap;
+	list-style: none;
+	padding: 0;
+	margin: 1rem 0;
+	overflow: hidden;
+	border-radius: 10px;
+}
+.tool {}
+.tool--btn {
+	display: block;
+	border: none;
+	padding: .5rem;
+}
+
+/* .bg-result {
+    height: 100%;
+} */
+
+/* Form styling */
+
+.hosted-by label {
+    padding-right: 3rem;
+}
+
+.hosted-by label .special {
+    font-size: 14px;
+}
+
+label {
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+input[type="text"], select {
+    width: 100%;
+    padding: 5px 2px;
+}
+
+
+/* Card output */
+.header-color {
+    padding-top: 15px;
+    color: rgb(30, 6, 138);
+}
+
+.couple-name {
+    font-size: 4rem;
+}
+
+.name2-color {
+    color: rgb(102, 15, 110);
+}
+
+.name1-color {
+    color: orange;
+}
+
+.wedding-and {
+    font-size: 3rem;
+}
+
+.wedding-details1, .wedding-details2 {
+    font-size: 17px;
+    color: rgb(30, 6, 138);
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 768px) {
+    .section-flexed {
+        display: block;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    .form-div {
+        padding: 0.5rem;
+    }
+
+    #myDiv {
+        padding: 4rem 0.8rem;
+    }
+
+    .couple-name {
+        font-size: 3rem;
+    }
+
+    .wedding-details1, .wedding-details2 {
+        font-size: 16px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (max-width: 1200px) {
+    .section-flexed {
+        display: block;
+    }
+
+    #myDiv {
+        padding: 4rem 0.8rem;
+    }
+}

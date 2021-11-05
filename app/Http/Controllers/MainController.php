@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\EmailVerifyToken;
+use App\Models\EventType;
 use App\Models\Templates;
 use App\Models\User;
 use App\Notifications\VerifyEmailNotification;
@@ -49,11 +50,15 @@ class MainController extends Controller
         //sellect the user
         $user = User::where('email', $request->email)->first();
         $user->notify(new VerifyEmailNotification($name, $request->email, $token));
-        EmailVerifyToken::create([
+        $send_mail = EmailVerifyToken::create([
             'token' => $token,
             'email' => $request->email
         ]);
-        return back()->with('verifyEmail', "An Email Verification Link has been sent to the email address " . $request->email . " for veification. Do ensure to verify your email address before progressing!");
+        if ($send_mail) {
+            return back()->with('verifyEmail', "An Email Verification Link has been sent to the email address " . $request->email . " for veification. Do ensure to verify your email address before progressing!");
+        } else {
+            return back()->with('unable', "Registration was Successfull");
+        }
     }
 
     public function completeVerification(Request $req)
@@ -122,6 +127,18 @@ class MainController extends Controller
         return $this->dynamicPages($page);
     }
 
+    // a function to make the profile update dynamic
+    private function update($req, $user)
+    {
+        $user->username = $req->username;
+        $user->fullname = $req->fullname;
+        $user->email = $req->email;
+        $user->phone = $req->phone;
+        $user->save();
+
+        return back()->with('updated', "Profile Update was Successfull!");
+    }
+    
     public function update_profile(Request $req)
     {
         $user = User::where('user_id', Auth::user()->user_id)->first();
@@ -133,13 +150,9 @@ class MainController extends Controller
             $filePath = $req->file('picture')->storeAs('uploads', $name, 'public');
 
             $user->picture = '/storage/' . $filePath;
-            $user->username = $req->username;
-            $user->fullname = $req->fullname;
-            $user->email = $req->email;
-            $user->phone = $req->phone;
-            $user->save();
-
-            return back()->with('updated', "Profile Update was Successfull!");
+            return $this->update($req, $user);
+        } else {
+            return $this->update($req, $user);
         }
     }
 
@@ -158,18 +171,38 @@ class MainController extends Controller
         return back()->with('success', "Your Password was Updated successfully");
     }
 
+    public function choose_event(){
+        $page = 'choose_event';
+        $all_events = ['all_events'=> EventType::all()];
+
+        return $this->dynamicPages($page)->with($all_events);
+    }
+
+    public function start_creating(Request $req, $no_of_celebrant){
+        $page = 'start_creating';
+        $cel = ['no_of_celebrant' => $no_of_celebrant];
+        $event = ['event' => $req->event];
+        $name = ['name' => $req->id];
+
+        return $this->dynamicPages($page)->with($cel)
+                                        ->with($event)
+                                        ->with($name);
+    }
+
     public function select_design()
     {
         $page = 'select_design';
-        $templates = ['templates'=>Templates::all()];
+        $templates = ['templates' => Templates::all()];
         return $this->dynamicPages($page)->with($templates);
     }
 
     public function create_invite($temp_id)
-    {   
-        $select_temp = ['select_temp'=>Templates::where('temp_id', $temp_id)->first()];
+    {
+        $select_temp = ['select_temp' => Templates::where('temp_id', $temp_id)->first()];
 
         $page = 'create_invite';
         return $this->dynamicPages($page)->with($select_temp);
     }
+
+
 }

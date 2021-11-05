@@ -21,6 +21,9 @@
     <link rel="stylesheet" href="{{URL::asset('assets/css/magnific-popup.css')}}">
     <link rel="stylesheet" href="{{URL::asset('assets/css/flaticon.css')}}">
     <link rel="stylesheet" href="{{URL::asset('assets/css/main.css')}}">
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{URL::asset('card_style.css')}}">
+
 
     <link rel="shortcut icon" href="{{URL::asset('assets/images/favicon.png')}}" type="image/x-icon">
 </head>
@@ -75,7 +78,7 @@
                             <a href="{{route('profile')}}"><i class="fas fa-user"></i>Profile</a>
                         </li>
                         <li>
-                            <a href="{{route('select_design')}}"><i class="fas fa-plus-square"></i>Create Invites</a>
+                            <a href="{{route('choose_event')}}"><i class="fas fa-plus-square"></i>Create Invites</a>
                         </li>
                         <li>
                             <a href=""><i class="fas fa-mail-bulk"></i>Saved Invites</a>
@@ -91,7 +94,7 @@
                             <a href="{{route('/')}}" class=""><i class=""></i>Go to Home</a>
                         </li>
                         <li>
-                            <a href="{{route('select_design')}}"><i class="fas fa-plus-square"></i>Create Invites</a>
+                            <a href="{{route('choose_event')}}"><i class="fas fa-plus-square"></i>Create Invites</a>
                         </li>
                         <li>
                             <a href="{{route('login')}}"><i class="fas fa-lock"></i>Sign In</a>
@@ -106,7 +109,7 @@
                         <div class="container">
                             <div class="mobile-header d-flex justify-content-between d-lg-none align-items-center">
                                 <div class="author">
-                                    <img src="{{URL::asset('assets/images/dashboard/author.png')}}" alt="dashboard">
+
                                 </div>
                                 <div class="cross-header-bar">
                                     <span></span>
@@ -209,6 +212,7 @@
 
     </div>
 
+    <script src="{{URL::asset('card_js.js')}}"></script>
     <script data-cfasync="false" src="{{URL::asset('../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js')}}"></script>
     <script src="{{URL::asset('assets/js/jquery-3.3.1.min.js')}}"></script>
     <script src="{{URL::asset('assets/js/modernizr-3.6.0.min.js')}}"></script>

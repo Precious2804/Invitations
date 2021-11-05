@@ -523,6 +523,7 @@ class ComposerStaticInita8095bddc8acf9bbd3cdf4cbe36c0da3
     public static $classMap = array (
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
+        'App\\Http\\Controllers\\AdminController' => __DIR__ . '/../..' . '/app/Http/Controllers/AdminController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\MainController' => __DIR__ . '/../..' . '/app/Http/Controllers/MainController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
@@ -534,7 +535,9 @@ class ComposerStaticInita8095bddc8acf9bbd3cdf4cbe36c0da3
         'App\\Http\\Middleware\\TrustHosts' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustHosts.php',
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\Http\\Middleware\\is_admin' => __DIR__ . '/../..' . '/app/Http/Middleware/is_admin.php',
         'App\\Models\\EmailVerifyToken' => __DIR__ . '/../..' . '/app/Models/EmailVerifyToken.php',
+        'App\\Models\\EventType' => __DIR__ . '/../..' . '/app/Models/EventType.php',
         'App\\Models\\Templates' => __DIR__ . '/../..' . '/app/Models/Templates.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Notifications\\VerifyEmailNotification' => __DIR__ . '/../..' . '/app/Notifications/VerifyEmailNotification.php',

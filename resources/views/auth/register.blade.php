@@ -26,6 +26,11 @@
                     {{Session::get('verifyEmail')}}
                 </div>
                 @endif
+                @if(Session::get('unable'))
+                <div class="alert alert-success">
+                    {{Session::get('unable')}}
+                </div>
+                @endif
                 <form class="account-form" method="POST" action="{{route('do-register')}}">
                     @csrf
                     <div class="form-group">

@@ -8,6 +8,7 @@ $baseDir = dirname($vendorDir);
 return array(
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
+    'App\\Http\\Controllers\\AdminController' => $baseDir . '/app/Http/Controllers/AdminController.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
     'App\\Http\\Controllers\\MainController' => $baseDir . '/app/Http/Controllers/MainController.php',
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',
@@ -19,7 +20,9 @@ return array(
     'App\\Http\\Middleware\\TrustHosts' => $baseDir . '/app/Http/Middleware/TrustHosts.php',
     'App\\Http\\Middleware\\TrustProxies' => $baseDir . '/app/Http/Middleware/TrustProxies.php',
     'App\\Http\\Middleware\\VerifyCsrfToken' => $baseDir . '/app/Http/Middleware/VerifyCsrfToken.php',
+    'App\\Http\\Middleware\\is_admin' => $baseDir . '/app/Http/Middleware/is_admin.php',
     'App\\Models\\EmailVerifyToken' => $baseDir . '/app/Models/EmailVerifyToken.php',
+    'App\\Models\\EventType' => $baseDir . '/app/Models/EventType.php',
     'App\\Models\\Templates' => $baseDir . '/app/Models/Templates.php',
     'App\\Models\\User' => $baseDir . '/app/Models/User.php',
     'App\\Notifications\\VerifyEmailNotification' => $baseDir . '/app/Notifications/VerifyEmailNotification.php',

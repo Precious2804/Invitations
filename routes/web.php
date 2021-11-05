@@ -31,6 +31,8 @@ Route::get('auth.login', [MainController::class, 'login'])->name('login');
 Route::get('auth.register', [MainController::class, 'register'])->name('register');
 Route::post('/do-register', [MainController::class, 'doRegister'])->name('do-register');
 Route::post('/do-login', [MainController::class, 'doLogin'])->name('do-login');
+Route::get('/start_creating/{no_of_celebrant}', [MainController::class, 'start_creating'])->name('start_creating');
+Route::get('/choose_event', [MainController::class, 'choose_event'])->name('choose_event');
 Route::get('/select_design', [MainController::class, 'select_design'])->name('select_design');
 Route::get('/create_invite/{temp_id}', [MainController::class, 'create_invite'])->name('create_invite');
 
