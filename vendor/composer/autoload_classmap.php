@@ -23,6 +23,7 @@ return array(
     'App\\Http\\Middleware\\is_admin' => $baseDir . '/app/Http/Middleware/is_admin.php',
     'App\\Models\\EmailVerifyToken' => $baseDir . '/app/Models/EmailVerifyToken.php',
     'App\\Models\\EventType' => $baseDir . '/app/Models/EventType.php',
+    'App\\Models\\Invites' => $baseDir . '/app/Models/Invites.php',
     'App\\Models\\Templates' => $baseDir . '/app/Models/Templates.php',
     'App\\Models\\User' => $baseDir . '/app/Models/User.php',
     'App\\Notifications\\VerifyEmailNotification' => $baseDir . '/app/Notifications/VerifyEmailNotification.php',

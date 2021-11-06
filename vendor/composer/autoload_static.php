@@ -538,6 +538,7 @@ class ComposerStaticInita8095bddc8acf9bbd3cdf4cbe36c0da3
         'App\\Http\\Middleware\\is_admin' => __DIR__ . '/../..' . '/app/Http/Middleware/is_admin.php',
         'App\\Models\\EmailVerifyToken' => __DIR__ . '/../..' . '/app/Models/EmailVerifyToken.php',
         'App\\Models\\EventType' => __DIR__ . '/../..' . '/app/Models/EventType.php',
+        'App\\Models\\Invites' => __DIR__ . '/../..' . '/app/Models/Invites.php',
         'App\\Models\\Templates' => __DIR__ . '/../..' . '/app/Models/Templates.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Notifications\\VerifyEmailNotification' => __DIR__ . '/../..' . '/app/Notifications/VerifyEmailNotification.php',

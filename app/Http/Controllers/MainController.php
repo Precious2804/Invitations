@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\EmailVerifyToken;
 use App\Models\EventType;
+use App\Models\Invites;
 use App\Models\Templates;
 use App\Models\User;
 use App\Notifications\VerifyEmailNotification;
@@ -138,7 +139,7 @@ class MainController extends Controller
 
         return back()->with('updated', "Profile Update was Successfull!");
     }
-    
+
     public function update_profile(Request $req)
     {
         $user = User::where('user_id', Auth::user()->user_id)->first();
@@ -171,22 +172,24 @@ class MainController extends Controller
         return back()->with('success', "Your Password was Updated successfully");
     }
 
-    public function choose_event(){
+    public function choose_event()
+    {
         $page = 'choose_event';
-        $all_events = ['all_events'=> EventType::all()];
+        $all_events = ['all_events' => EventType::all()];
 
         return $this->dynamicPages($page)->with($all_events);
     }
 
-    public function start_creating(Request $req, $no_of_celebrant){
+    public function start_creating(Request $req, $no_of_celebrant)
+    {
         $page = 'start_creating';
         $cel = ['no_of_celebrant' => $no_of_celebrant];
         $event = ['event' => $req->event];
         $name = ['name' => $req->id];
 
         return $this->dynamicPages($page)->with($cel)
-                                        ->with($event)
-                                        ->with($name);
+            ->with($event)
+            ->with($name);
     }
 
     public function select_design()
@@ -204,5 +207,35 @@ class MainController extends Controller
         return $this->dynamicPages($page)->with($select_temp);
     }
 
+    public function create_now(Request $req)
+    {
 
+        $invite_id = $this->generateRand('invites', 'invite_id');
+        $result = Invites::create([
+            'user_id' => Auth::user()->user_id,
+            'invite_id' => $invite_id,
+            'bride_fam' => $req->bride_fam,
+            'groom_fam' => $req->groom_fam,
+            'bride' => $req->bride,
+            'groom' => $req->groom,
+            'departed' => $req->departed,
+            'title' => $req->title,
+            'celebrant' => $req->celebrant,
+            'event' => $req->event,
+            'date' => $req->date,
+            'time' => $req->time,
+            'venue' => $req->venue,
+            'reception' => $req->reception,
+            'address' => $req->address,
+            'reception_address' => $req->reception_address,
+            'color' => $req->color,
+            'rsvp' => $req->rsvp,
+            'toast' => $req->toast
+        ]);
+        if ($result) {
+            // session()->put('invite_id', $invite_id);
+            // $data = ['invite_id'=>$invite_id];
+            return redirect(route('select_design')."?invite_id=$invite_id");
+        }
+    }
 }

@@ -31,10 +31,8 @@ Route::get('auth.login', [MainController::class, 'login'])->name('login');
 Route::get('auth.register', [MainController::class, 'register'])->name('register');
 Route::post('/do-register', [MainController::class, 'doRegister'])->name('do-register');
 Route::post('/do-login', [MainController::class, 'doLogin'])->name('do-login');
-Route::get('/start_creating/{no_of_celebrant}', [MainController::class, 'start_creating'])->name('start_creating');
-Route::get('/choose_event', [MainController::class, 'choose_event'])->name('choose_event');
 Route::get('/select_design', [MainController::class, 'select_design'])->name('select_design');
-Route::get('/create_invite/{temp_id}', [MainController::class, 'create_invite'])->name('create_invite');
+
 
 Route::group(['middleware' => ['auth']], function () {
     Route::get('/dashboard', [MainController::class, 'dashboard'])->name('dashboard');
@@ -42,6 +40,10 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/profile', [MainController::class, 'profile'])->name('profile');
     Route::post('/update_profile', [MainController::class, 'update_profile'])->name('update_profile');
     Route::post('/change_password', [MainController::class, 'change_password'])->name('change_password');
+    Route::get('/start_creating/{no_of_celebrant}', [MainController::class, 'start_creating'])->name('start_creating');
+    Route::get('/choose_event', [MainController::class, 'choose_event'])->name('choose_event');
+    Route::get('/create_invite/{temp_id}', [MainController::class, 'create_invite'])->name('create_invite');
+    Route::post('/create_now', [MainController::class, 'create_now'])->name('create_now');
 });
 
 // AdminController routes
