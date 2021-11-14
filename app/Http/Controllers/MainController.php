@@ -192,19 +192,30 @@ class MainController extends Controller
             ->with($name);
     }
 
-    public function select_design()
+    public function select_design(Request $request)
     {
+        $invite_id =['invite_id'=> $request->invite_id];
         $page = 'select_design';
         $templates = ['templates' => Templates::all()];
-        return $this->dynamicPages($page)->with($templates);
+        return $this->dynamicPages($page)->with($templates)
+                                            ->with($invite_id);
     }
 
-    public function create_invite($temp_id)
+    public function create_invite(Request $request)
     {
-        $select_temp = ['select_temp' => Templates::where('temp_id', $temp_id)->first()];
+        $template = $request->template;
+        $invite_id = $request->invite_id;
+        //updating the chosen template in the db
+        $data = Invites::where('invite_id', $invite_id)->first();
+        $data->update([
+            'template'=>$template,
+        ]);
+
+        $select_temp = ['select_temp' => $template];
+        $invite_details = ['invite_details'=>$data];
 
         $page = 'create_invite';
-        return $this->dynamicPages($page)->with($select_temp);
+        return $this->dynamicPages($page)->with($select_temp)->with($invite_details);
     }
 
     public function create_now(Request $req)

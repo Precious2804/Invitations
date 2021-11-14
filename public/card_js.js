@@ -3,6 +3,11 @@ function streetFn() {
     let x = document.querySelector("#street").value;
     document.querySelector(".streetAddress").innerHTML = x;
 }
+function receptionFn() {
+    // const streetOutput = ;
+    let x = document.querySelector("#reception").value;
+    document.querySelector(".receptionAddress").innerHTML = x;
+}
 
 function cityFn() {
     let cityInput = document.querySelector("#cityInput");

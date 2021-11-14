@@ -23,9 +23,10 @@
     <link rel="stylesheet" href="{{URL::asset('assets/css/main.css')}}">
     <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.css" rel="stylesheet">
     <link rel="stylesheet" href="{{URL::asset('card_style.css')}}">
+    
 
 
-    <link rel="shortcut icon" href="{{URL::asset('assets/images/favicon.png')}}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{URL::asset('favicon.ico')}}" type="image/x-icon">
 </head>
 
 <body>
@@ -39,7 +40,7 @@
                 <div class="loader-line-wrap">
                     <div class="loader-line"></div>
                 </div>
-                <div class="loader-line-wrap">
+                <!-- <div class="loader-line-wrap">
                     <div class="loader-line"></div>
                 </div>
                 <div class="loader-line-wrap">
@@ -47,7 +48,7 @@
                 </div>
                 <div class="loader-line-wrap">
                     <div class="loader-line"></div>
-                </div>
+                </div> -->
             </div>
         </div>
         <div class="overlay"></div>
@@ -66,7 +67,7 @@
                 <div class="site-header-container">
                     <div class="side-logo">
                         <a href="{{route('dashboard')}}">
-                            <img src="{{URL::asset('assets/images/logo/logo.png')}}" alt="logo">
+                            <img src="{{URL::asset('assets/images/invitation_logo.png')}}" alt="Invitation">
                         </a>
                     </div>
                     <ul class="dashboard-menu">

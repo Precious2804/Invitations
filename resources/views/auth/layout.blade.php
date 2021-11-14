@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="{{URL::asset('assets/css/flaticon.css')}}">
     <link rel="stylesheet" href="{{URL::asset('assets/css/main.css')}}">
 
-    <link rel="shortcut icon" href="{{URL::asset('assets/images/favicon.png')}}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{URL::asset('favicon.ico')}}" type="image/x-icon">
 
 
 </head>
@@ -37,23 +37,31 @@
             </div>
         </div>
     </div>
+    <div class="account-section bg_img" data-background="{{URL::asset('assets/images/account-bg.jpg')}}">
+        <div class="container">
+            <div class="account-title text-center">
+                <a href="{{route('/')}}" class="back-home"><i class="fas fa-angle-left"></i><span>Back <span class="d-none d-sm-inline-block">To Home</span></span></a>
+                <a href="{{route('/')}}" class="logo">
+                    <img src="{{URL::asset('assets/images/invitation_white.png')}}" alt="Invitation" style="width: 200px;">
+                </a>
+            </div>
 
 
-    @yield('content')
+            @yield('content')
 
-    <script src="{{URL::asset('assets/js/jquery-3.3.1.min.js')}}"></script>
-    <script src="{{URL::asset('assets/js/modernizr-3.6.0.min.js')}}"></script>
-    <script src="{{URL::asset('assets/js/plugins.js')}}"></script>
-    <script src="{{URL::asset('assets/js/bootstrap.min.js')}}"></script>
-    <script src="{{URL::asset('assets/js/magnific-popup.min.js')}}"></script>
-    <script src="{{URL::asset('assets/js/jquery-ui.min.js')}}"></script>
-    <script src="{{URL::asset('assets/js/wow.min.js')}}"></script>
-    <script src="{{URL::asset('assets/js/odometer.min.js')}}"></script>
-    <script src="{{URL::asset('assets/js/viewport.jquery.js')}}"></script>
-    <script src="{{URL::asset('assets/js/nice-select.js')}}"></script>
-    <script src="{{URL::asset('assets/js/owl.min.js')}}"></script>
-    <script src="{{URL::asset('assets/js/paroller.js')}}"></script>
-    <script src="{{URL::asset('assets/js/main.js')}}"></script>
+            <script src="{{URL::asset('assets/js/jquery-3.3.1.min.js')}}"></script>
+            <script src="{{URL::asset('assets/js/modernizr-3.6.0.min.js')}}"></script>
+            <script src="{{URL::asset('assets/js/plugins.js')}}"></script>
+            <script src="{{URL::asset('assets/js/bootstrap.min.js')}}"></script>
+            <script src="{{URL::asset('assets/js/magnific-popup.min.js')}}"></script>
+            <script src="{{URL::asset('assets/js/jquery-ui.min.js')}}"></script>
+            <script src="{{URL::asset('assets/js/wow.min.js')}}"></script>
+            <script src="{{URL::asset('assets/js/odometer.min.js')}}"></script>
+            <script src="{{URL::asset('assets/js/viewport.jquery.js')}}"></script>
+            <script src="{{URL::asset('assets/js/nice-select.js')}}"></script>
+            <script src="{{URL::asset('assets/js/owl.min.js')}}"></script>
+            <script src="{{URL::asset('assets/js/paroller.js')}}"></script>
+            <script src="{{URL::asset('assets/js/main.js')}}"></script>
 
 
 </body>

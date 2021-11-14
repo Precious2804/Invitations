@@ -108,7 +108,7 @@ $page = 'Create Invitations'
                                                     </ul>
                                                 </div>
 
-                                                <div id="myDiv" style="background-image: url(<?php echo $select_temp['image']; ?>);" contenteditable="true">
+                                                <div id="myDiv" style="background-image: url(<?php echo $select_temp; ?>);" contenteditable="true">
                                                     <div class="result-div">
                                                         <p class="header-color">
                                                             Please join us to celebrate the wedding of
@@ -116,38 +116,38 @@ $page = 'Create Invitations'
 
                                                         <div>
                                                             <p class="couple-name name1-color bride">
-                                                                Amanda
+                                                                {{$invite_details['bride']}}
                                                             </p>
                                                             <p class="wedding-and">
                                                                 &
                                                             </p>
                                                             <p class="couple-name name2-color groom">
-                                                                Daniel
+                                                                {{$invite_details['groom']}}
                                                             </p>
                                                         </div>
 
                                                         <div class="wedding-details1">
                                                             <p class="dateOutput">
-                                                                Thursday, November 2021
+                                                                Date: {{$invite_details['date']}}
                                                             </p>
                                                             <p class="timeOutput">
-                                                                9:30pm
+                                                                Time: {{$invite_details['time']}}
                                                             </p>
                                                         </div>
                                                         <br>
                                                         <div class="wedding-details2">
                                                             <p class="location">
-                                                                Lagaurdia Hotel
+                                                                Venue: {{$invite_details['venue']}}
                                                             </p>
                                                             <p class="streetAddress">
-                                                                29, Omege street, Abakpa, Nike, Enugu
+                                                                {{$invite_details['address']}}
                                                             </p>
-                                                            <p>
+                                                            <!-- <p>
                                                                 <span class="city"> Enugu,</span>
                                                                 <span class="state"> Enugu State</span>
-                                                            </p>
-                                                            <p>
-                                                                Reception to follow
+                                                            </p> -->
+                                                            <p class="receptionAddress">
+                                                                Reception: {{$invite_details['reception_address']}}
                                                             </p>
                                                         </div>
                                                     </div>
@@ -162,53 +162,48 @@ $page = 'Create Invitations'
                                         <div class="card-body">
                                             <div class="form-div">
                                                 <form>
-                                                    <div>
-                                                        <label for="eventType">
-                                                            Event Type*
-                                                        </label>
-                                                        <select name="eventType">
-                                                            <option value="Weddings">Weddings</option>
-                                                            <option value="Birthdays">Birthdays</option>
-                                                            <option value="Anniversary">Anniversary</option>
-                                                        </select>
-                                                    </div>
-
                                                     <div class="hosted-by">
                                                         <label for="bride">
                                                             Name of Bride *
                                                         </label>
-                                                        <input type="text" id="brideInput" onkeyup="brideFn()" required>
+                                                        <input type="text" id="brideInput" onkeyup="brideFn()" value="{{$invite_details['bride']}}">
                                                     </div>
                                                     <div class="hosted-by">
                                                         <label for="groom">
                                                             Name of Groom *
                                                         </label>
-                                                        <input type="text" id="groomInput" onkeyup="groomFn()" required>
+                                                        <input type="text" id="groomInput" onkeyup="groomFn()" value="{{$invite_details['groom']}}">
                                                     </div>
 
                                                     <div>
                                                         <label for="eventTitle">
                                                             Event Date/Time*
                                                         </label>
-                                                        <input type="date" id="dateFn" required />
-                                                        <input type="time" id="timeFn" required />
+                                                        <input type="date" id="dateFn" value="{{$invite_details['date']}}" />
+                                                        <input type="time" id="timeFn" value="{{$invite_details['time']}}" />
                                                     </div>
 
                                                     <div>
                                                         <label for="location">
                                                             Name of Location
                                                         </label>
-                                                        <input type="text" onkeyup="locationFn()" id="locationInput" required />
+                                                        <input type="text" onkeyup="locationFn()" id="locationInput" value="{{$invite_details['venue']}}" />
                                                     </div>
 
                                                     <div>
                                                         <label for="street">
                                                             Street Address
                                                         </label>
-                                                        <input type="text" id="street" onkeyup="streetFn()" required />
+                                                        <input type="text" id="street" onkeyup="streetFn()" value="{{$invite_details['address']}}" />
+                                                    </div>
+                                                    <div>
+                                                        <label for="street">
+                                                            Reception
+                                                        </label>
+                                                        <input type="text" id="reception" onkeyup="receptionFn()" value="{{$invite_details['reception_address']}}" />
                                                     </div>
 
-                                                    <div>
+                                                    <!-- <div>
                                                         <label for="city">
                                                             City
                                                         </label>
@@ -220,7 +215,7 @@ $page = 'Create Invitations'
                                                             State
                                                         </label>
                                                         <input type="text" id="stateInput" onkeyup="stateFn()" required />
-                                                    </div>
+                                                    </div> -->
                                                 </form>
                                             </div>
                                         </div>
