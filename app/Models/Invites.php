@@ -19,6 +19,7 @@ class Invites extends Model
         'title',
         'celebrant',
         'event',
+        'event_name',
         'date',
         'time',
         'venue',

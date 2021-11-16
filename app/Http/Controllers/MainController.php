@@ -194,11 +194,11 @@ class MainController extends Controller
 
     public function select_design(Request $request)
     {
-        $invite_id =['invite_id'=> $request->invite_id];
+        $invite_id = ['invite_id' => $request->invite_id];
         $page = 'select_design';
         $templates = ['templates' => Templates::all()];
         return $this->dynamicPages($page)->with($templates)
-                                            ->with($invite_id);
+            ->with($invite_id);
     }
 
     public function create_invite(Request $request)
@@ -208,14 +208,15 @@ class MainController extends Controller
         //updating the chosen template in the db
         $data = Invites::where('invite_id', $invite_id)->first();
         $data->update([
-            'template'=>$template,
+            'template' => $template,
         ]);
 
         $select_temp = ['select_temp' => $template];
-        $invite_details = ['invite_details'=>$data];
+        $invite_details = ['invite_details' => $data];
+        $invite_id = ['invite_id' => $invite_id];
 
         $page = 'create_invite';
-        return $this->dynamicPages($page)->with($select_temp)->with($invite_details);
+        return $this->dynamicPages($page)->with($select_temp)->with($invite_details)->with($invite_id);
     }
 
     public function create_now(Request $req)
@@ -241,12 +242,78 @@ class MainController extends Controller
             'reception_address' => $req->reception_address,
             'color' => $req->color,
             'rsvp' => $req->rsvp,
-            'toast' => $req->toast
+            'toast' => $req->toast,
+            'event_name' => $req->event_name
         ]);
         if ($result) {
             // session()->put('invite_id', $invite_id);
             // $data = ['invite_id'=>$invite_id];
-            return redirect(route('select_design')."?invite_id=$invite_id");
+            return redirect(route('select_design') . "?invite_id=$invite_id");
         }
+    }
+
+    public function save_invite(Request $req)
+    {
+        $data = Invites::where('invite_id', $req->invite_id)->first();
+
+        $data->update([
+            'bride_fam' => $req->bride_fam,
+            'groom_fam' => $req->groom_fam,
+            'bride' => $req->bride,
+            'groom' => $req->groom,
+            'departed' => $req->departed,
+            'title' => $req->title,
+            'celebrant' => $req->celebrant,
+            'event' => $req->event,
+            'date' => $req->date,
+            'time' => $req->time,
+            'venue' => $req->venue,
+            'reception' => $req->reception,
+            'address' => $req->address,
+            'reception_address' => $req->reception_address,
+            'color' => $req->color,
+            'rsvp' => $req->rsvp,
+            'toast' => $req->toast,
+            'event_name' => $req->event_name
+        ]);
+
+        return back()->with('saved', "Invitation has been saved Successfully");
+    }
+
+    public function all_saves()
+    {
+        $page = 'all_saves';
+
+        $all_invites = ['all_invites' => Invites::where('user_id', Auth::user()->user_id)->get()];
+        return $this->dynamicPages($page)->with($all_invites);
+    }
+
+    public function delete_invite($invite_id)
+    {
+        $data = Invites::where('invite_id', $invite_id)->first();
+
+        $data->delete();
+        return redirect()->to(route('all_saves'))->with('deleted', "An Invitation Card was deleted successfully");
+    }
+
+    public function preview_invite($invite_id)
+    {
+        $page = 'preview_invite';
+
+        $invite_details = ['invite_details' => Invites::where('invite_id', $invite_id)->first()];
+        return $this->dynamicPages($page)->with($invite_details);
+    }
+
+    public function edit_invite($invite_id)
+    {
+        $data = Invites::where('invite_id', $invite_id)->first();
+        $template = $data['template'];
+
+        $select_temp = ['select_temp' => $template];
+        $invite_details = ['invite_details' => $data];
+        $invite_id = ['invite_id' => $invite_id];
+
+        $page = 'create_invite';
+        return $this->dynamicPages($page)->with($select_temp)->with($invite_details)->with($invite_id);
     }
 }

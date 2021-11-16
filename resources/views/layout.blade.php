@@ -23,10 +23,9 @@
     <link rel="stylesheet" href="{{URL::asset('assets/css/main.css')}}">
     <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.css" rel="stylesheet">
     <link rel="stylesheet" href="{{URL::asset('card_style.css')}}">
-    
-
 
     <link rel="shortcut icon" href="{{URL::asset('favicon.ico')}}" type="image/x-icon">
+    
 </head>
 
 <body>
@@ -82,7 +81,7 @@
                             <a href="{{route('choose_event')}}"><i class="fas fa-plus-square"></i>Create Invites</a>
                         </li>
                         <li>
-                            <a href=""><i class="fas fa-mail-bulk"></i>Saved Invites</a>
+                            <a href="{{route('all_saves')}}"><i class="fas fa-mail-bulk"></i>Saved Invites</a>
                         </li>
                         <li>
                             <a href=""><i class="fas fa-video"></i>Make a Video</a>
@@ -156,7 +155,7 @@
                                                         @endif
                                                     </div>
                                                     <h6 class="title">{{$loggedUserInfo['fullname']}}</h6>
-                                                    <a href="#mailto:johndoe@gmail.com"><span class="__cf_email__" data-cfemail="85cfeaedebe1eae0c5e2e8e4ece9abe6eae8">{{$loggedUserInfo['email']}}</span></a>
+                                                    <a href="{{route('profile')}}"><span class="__cf_email__" data-cfemail="85cfeaedebe1eae0c5e2e8e4ece9abe6eae8">{{$loggedUserInfo['email']}}</span></a>
                                                 </div>
                                                 <div class="author-body">
                                                     <ul>

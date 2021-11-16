@@ -9,11 +9,23 @@ function receptionFn() {
     document.querySelector(".receptionAddress").innerHTML = x;
 }
 
-function cityFn() {
-    let cityInput = document.querySelector("#cityInput");
-    let city = document.querySelector(".city");
+function toastFn() {
+    let toastInput = document.querySelector("#toastInput");
+    let toastStat = document.querySelector(".toastStat");
 
-    city.innerHTML = `<span>${cityInput.value},</span>`
+    toastStat.innerHTML = `<span>${toastInput.value},</span>`
+}
+function colorFn() {
+    let colorInput = document.querySelector("#colorInput");
+    let colorStat = document.querySelector(".colorStat");
+
+    colorStat.innerHTML = `<span>${colorInput.value},</span>`
+}
+function venueFn() {
+    let venueInput = document.querySelector("#venueInput");
+    let venueDet = document.querySelector(".venueDet");
+
+    venueDet.innerHTML = `<span>${venueInput.value},</span>`
 }
 
 function stateFn() {
@@ -29,41 +41,44 @@ function locationFn() {
 
     location.innerHTML = `<span>${locationInput.value}</span>`
 }
+function brideFamFn() {
+    let bridefamInput = document.querySelector("#bridefamInput");
+    let brideFam = document.querySelector(".brideFam");
+
+    brideFam.innerHTML = `<span>${bridefamInput.value}</span>`
+}
+function groomFamFn() {
+    let groomFamInput = document.querySelector("#groomFamInput");
+    let groomFam = document.querySelector(".groomFam");
+
+    groomFam.innerHTML = `<span>${groomFamInput.value}</span>`
+}
+
 function brideFn() {
     let brideInput = document.querySelector("#brideInput");
     let bride = document.querySelector(".bride");
 
     bride.innerHTML = `<span>${brideInput.value}</span>`
 }
+
 function groomFn() {
     let groomInput = document.querySelector("#groomInput");
     let groom = document.querySelector(".groom");
 
     groom.innerHTML = `<span>${groomInput.value}</span>`
 }
+function dateFn() {
+    let dateOutput = document.querySelector("#dateOutput");
+    let date = document.querySelector(".date");
 
-// function dateFn() {
-//     let y = document.querySelector("#dateFn");
-//     y.addEventListener(()=> {
-        
-//     })
-//     document.querySelector(".dateInput").innerHTML = y;
-//     return y;
-// }
+    date.innerHTML = `<span>${dateOutput.value}</span>`
+}
+function timeFn() {
+    let timeOutput = document.querySelector("#timeOutput");
+    let time = document.querySelector(".time");
 
-let dateInput = document.querySelector("#dateFn");
-let dateOutput = document.querySelector(".dateOutput");
-dateInput.addEventListener("change", () => {
-    dateOutput.innerHTML= dateInput.value;
-})
-
-let timeInput = document.querySelector("#timeFn");
-let timeOutput = document.querySelector(".timeOutput");
-timeInput.addEventListener("change", ()=> {
-    timeOutput.innerHTML = timeInput.value;
-})
-
-
+    time.innerHTML = `<span>${timeOutput.value}</span>`
+}
 
 
 let output = document.getElementById('myDiv');

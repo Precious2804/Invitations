@@ -18,6 +18,7 @@ $page = 'Start Creating Invitation'
                     <form class="create_ticket_form mb-30-none" method="POST" action="{{route('create_now')}}">
                         @csrf
                         <div class="row">
+                            <input type="hidden" name="event_name" value="{{$name}}">
                             <!-- Input for the Names of the celebrants/departed/programme title starts -->
                             @if($name == "wedding")
                             <div class="form-group col-lg-6">
@@ -63,12 +64,14 @@ $page = 'Start Creating Invitation'
                             <!-- Input for the Event Type Ends -->
 
                             <div class="form-group col-lg-3">
-                                <label for="">Month/Year</label>
-                                <input type="date" name="date" id="">
+                                <label for="">Date</label>
+                                <input type="text" name="date" id="" placeholder="Enter date">
+                                <span class="text-muted">Hint:(Saturday, 28th April 2021)</span>
                             </div>
                             <div class="form-group col-lg-3">
                                 <label for="">Time</label>
-                                <input type="time" name="time" id="">
+                                <input type="text" name="time" id="" placeholder="Enter time">
+                                <span class="text-muted">Hint:(6pm)</span>
                             </div>
 
                             <!-- Input for the venue starts -->
@@ -80,6 +83,7 @@ $page = 'Start Creating Invitation'
                             <div class="form-group col-lg-6">
                                 <label for="old_pass">Reception Venue:</label>
                                 <input type="text" name="reception" placeholder="Input the Venue for the Reception">
+                                <span class="text-muted">Hint: (Reception follows immediately at: ......)</span>
                             </div>
                             @endif
                             <!-- Input for the venue ends -->
@@ -94,18 +98,23 @@ $page = 'Start Creating Invitation'
                                 <label for="old_pass">Reception Address:</label>
                                 <input type="text" name="reception_address" placeholder="Address for the Reception">
                             </div>
-                            @endif
                             <!-- Input for address ends here -->
-
                             <!-- Input for Colors of the day starts -->
-                            @if($name != "funeral")
                             <div class="form-group col-lg-6">
                                 <label for="old_pass">Color(s) of the Day:</label>
                                 <input type="text" name="color" placeholder="Colors of the Day">
                             </div>
-                            @endif
                             <!-- Input for Colors of the day ends -->
 
+                            <!-- Input for Toast starts here -->
+                            <div class="form-group col-lg-6">
+                                <label for="old_pass">Toast</label>
+                                <textarea name="toast" id="" placeholder="Write a Toast Here"></textarea>
+                            </div>
+                            <!-- Input for Toast ends here -->
+                            @endif
+
+                            @if($name != "funeral")
                             <!-- Input for RSVP starts here -->
                             <div class="form-group col-lg-6">
                                 <label for="old_pass">RSVP(s):</label>
@@ -113,15 +122,7 @@ $page = 'Start Creating Invitation'
                                 <span class="text-muted">Hint: Seperate the numbers with a comma (,)</span>
                             </div>
                             <!-- Input for RSVP ends here -->
-
-                            <!-- Input for Toast starts here -->
-                            @if($name == "wedding")
-                            <div class="form-group col-lg-6">
-                                <label for="old_pass">Toast</label>
-                                <textarea name="toast" id="" placeholder="Write a Toast Here"></textarea>
-                            </div>
                             @endif
-                            <!-- Input for Toast ends here -->
                         </div>
                         <div class="col-lg-6 float-right">
                             <button type="submit" class="btn btn-primary">Click to Proceed</button>

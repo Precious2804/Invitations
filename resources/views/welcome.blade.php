@@ -2,8 +2,6 @@
 <html lang="en">
 
 
-<!-- Mirrored from pixner.net/hyipland/demo/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 03 Sep 2021 10:39:18 GMT -->
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -245,7 +243,7 @@
                             <span class="cate">WELCOME TO {{env('APP_NAME')}}</span>
                             <h2 class="title">about {{env('APP_NAME')}}</h2>
                             <p>
-                                HYIPLAND is an investment company, whose team is working on making money from the volatility of cryptocurrencies and offer great returns to our clients.
+                                {{env('APP_NAME')}} is an investment company, whose team is working on making money from the volatility of cryptocurrencies and offer great returns to our clients.
                             </p>
                         </div>
                         <div class="about--content">
@@ -398,7 +396,7 @@
                             </div>
                         </div>
                         <div class="affiliate-bottom">
-                            <h6 class="title">Make money with hyipland</h6>
+                            <h6 class="title">Make money with {{env('APP_NAME')}}</h6>
                             <a href="#0" class="custom-button">
                                 learn more <i class="flaticon-right"></i>
                             </a>
@@ -496,7 +494,7 @@
                                 <div class="client-item">
                                     <div class="client-content">
                                         <p>
-                                            Awesome hyipland most profitable site!
+                                            Awesome {{env('APP_NAME')}} most profitable site!
                                         </p>
                                         <div class="rating">
                                             <span>
@@ -537,7 +535,7 @@
                 <div class="container">
                     <div class="newslater-area">
                         <div class="newslater-content padding-bottom padding-top">
-                            <span class="cate">SUBSCRIBE TO hyipland</span>
+                            <span class="cate">SUBSCRIBE TO {{env('APP_NAME')}}</span>
                             <h3 class="title">To Get Exclusive Benefits</h3>
                             <form class="newslater-form">
                                 <input type="text" placeholder="Enter Your Email Here" required>
@@ -571,8 +569,8 @@
             <div class="container">
                 <div class="footer-top">
                     <div class="logo">
-                        <a href="index.html">
-                            <img src="assets/images/logo/footer-logo.png" alt="logo">
+                        <a href="{{route('/')}}">
+                            <img src="assets/images/invitation_white.png" alt="logo">
                         </a>
                     </div>
                     <ul class="links">
@@ -596,7 +594,7 @@
                 <div class="footer-bottom">
                     <div class="footer-bottom-area">
                         <div class="left">
-                            <p>&copy; 2020 <a href="#0">Hyipland</a> | All right reserved</p>
+                            <p>&copy; 2020 <a href="#0">{{env('APP_NAME')}}</a> | All right reserved</p>
                         </div>
                         <ul class="social-icons">
                             <li>
@@ -645,7 +643,5 @@
     <script src="assets/js/main.js"></script>
 </body>
 
-
-<!-- Mirrored from pixner.net/hyipland/demo/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 03 Sep 2021 10:48:25 GMT -->
 
 </html>

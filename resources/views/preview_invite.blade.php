@@ -24,14 +24,17 @@ $page = 'Create Invitations'
                                     <div class="card">
                                         <div class="card-body">
                                             <div class="bg-result">
-                                                @include('partials.toolbar')
+                                                <a href="/edit_invite/{{$invite_details['invite_id']}}">
+                                                    <button class="btn btn-primary btn-sm" style="margin-bottom: 12px; margin-left:8px; height:50%">Edit Invite</button>
+                                                </a>
+                                                <a href="/delete_invite/{{$invite_details['invite_id']}}">
+                                                    <button class="btn btn-danger btn-sm" style="margin-bottom: 12px; margin-left:8px; height:50%">Delete</button>
+                                                </a>
                                                 @if($invite_details['event_name'] == "wedding")
-                                                @include('partials.wedding')
-                                                @elseif($invite_details['event_name'] == "birthday" || $invite_details['event_name'] == "graduation")
-                                                @include('partials.birth_grad')
+                                                @include('previews.wedding')
                                                 @endif
 
-                            </div>
+                                            </div>
                         </section>
                     </main>
                 </div>

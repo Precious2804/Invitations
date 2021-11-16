@@ -43,7 +43,12 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/start_creating/{no_of_celebrant}', [MainController::class, 'start_creating'])->name('start_creating');
     Route::get('/create_invite', [MainController::class, 'create_invite'])->name('create_invite');
     Route::post('/create_now', [MainController::class, 'create_now'])->name('create_now');
+    Route::post('/save_invite', [MainController::class, 'save_invite'])->name('save_invite');
     Route::get('/select_design', [MainController::class, 'select_design'])->name('select_design');
+    Route::get('/all_saves', [MainController::class, 'all_saves'])->name('all_saves');
+    Route::get('/delete_invite/{invite_id}', [MainController::class, 'delete_invite'])->name('delete_invite');
+    Route::get('/preview_invite/{invite_id}', [MainController::class, 'preview_invite'])->name('preview_invite');
+    Route::get('/edit_invite/{invite_id}', [MainController::class, 'edit_invite'])->name('edit_invite');
 });
 
 // AdminController routes
