@@ -3,7 +3,7 @@
     {{Session::get('saved')}}
 </div>
 @endif
-<div id="myDiv" style="background-image: url(<?php echo $select_temp; ?>);">
+<div id="myDiv" style="background-image: url(<?php echo $select_temp; ?>);" contenteditable="true">
     <div class="result-div">
         <p class="header-color">
             With extreme Gladness of heart, we the families of

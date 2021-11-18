@@ -1,5 +1,5 @@
 <?php
-$page = 'Create Invitations'
+$page = 'Preview Invitations'
 ?>
 
 @extends('layout')
@@ -32,6 +32,8 @@ $page = 'Create Invitations'
                                                 </a>
                                                 @if($invite_details['event_name'] == "wedding")
                                                 @include('previews.wedding')
+                                                @elseif($invite_details['event_name'] == "birthday" || $invite_details['event_name'] == "graduation")
+                                                @include('previews.birth_grad')
                                                 @endif
 
                                             </div>

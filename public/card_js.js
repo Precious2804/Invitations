@@ -60,6 +60,12 @@ function brideFn() {
 
     bride.innerHTML = `<span>${brideInput.value}</span>`
 }
+function celebrantFn() {
+    let celebrantInput = document.querySelector("#celebrantInput");
+    let celebrant = document.querySelector(".celebrant");
+
+    celebrant.innerHTML = `<span>${celebrantInput.value}</span>`
+}
 
 function groomFn() {
     let groomInput = document.querySelector("#groomInput");

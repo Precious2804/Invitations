@@ -1,7 +1,22 @@
-<div id="myDiv" style="background-image: url(<?php echo $select_temp; ?>);">
+@if(Session::get('saved'))
+<div class="alert alert-success">
+    {{Session::get('saved')}}
+</div>
+@endif
+<div id="myDiv" style="background-image: url(<?php echo $select_temp; ?>);" contenteditable="true">
     <div class="result-div">
-        <span style="font-size: 35px;"> you are invited </span>
+        <p style="font-size: 50px;"> you are cordially invited </p>
 
+        <p>
+            to the {{$invite_details['event']}} of our dear
+        </p>
+
+        <p class="name1-color celebrant" style="font-size:40px; text-transform:uppercase; font-weight:bold; font-family:Brush Script MT; font-style:oblique">
+            {{$invite_details['celebrant']}}
+        </p>
+        <p>
+            which holds on the
+        </p>
 
         <div class="wedding-details1">
             <span class="date">{{$invite_details['date']}}</span>, Time: <span class="time">{{$invite_details['time']}}</span>
@@ -37,10 +52,10 @@
                     <input type="hidden" name="event" value="{{$invite_details['event']}}">
                     <input type="hidden" name="invite_id" value="{{$invite_id}}">
                     <div class="hosted-by">
-                        <label for="bride">
+                        <label for="">
                             Name of Celebrant
                         </label>
-                        <input type="text" name="bride" id="brideInput" onkeyup="brideFn()" value="{{$invite_details['bride']}}">
+                        <input type="text" name="celebrant" id="celebrantInput" onkeyup="celebrantFn()" value="{{$invite_details['celebrant']}}">
                     </div>
 
                     <div class="row">
