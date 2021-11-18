@@ -114,7 +114,6 @@ $page = 'Start Creating Invitation'
                             <!-- Input for Toast ends here -->
                             @endif
 
-                            @if($name != "funeral")
                             <!-- Input for RSVP starts here -->
                             <div class="form-group col-lg-6">
                                 <label for="old_pass">RSVP(s):</label>
@@ -122,7 +121,6 @@ $page = 'Start Creating Invitation'
                                 <span class="text-muted">Hint: Seperate the numbers with a comma (,)</span>
                             </div>
                             <!-- Input for RSVP ends here -->
-                            @endif
                         </div>
                         <div class="col-lg-6 float-right">
                             <button type="submit" class="btn btn-primary">Click to Proceed</button>

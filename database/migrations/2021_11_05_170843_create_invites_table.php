@@ -35,6 +35,7 @@ class CreateInvitesTable extends Migration
             $table->string('color')->nullable();
             $table->string('rsvp')->nullable();
             $table->longText('toast')->nullable();
+            $table->string('photo')->nullable();
             $table->string('template')->nullable();
             $table->timestamps();
         });

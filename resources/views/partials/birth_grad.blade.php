@@ -5,6 +5,13 @@
 @endif
 <div id="myDiv" style="background-image: url(<?php echo $select_temp; ?>);" contenteditable="true">
     <div class="result-div">
+        @if($invite_details['photo'])
+        <div class="row d-flex justify-content-center">
+            <div class="col-lg-6">
+                <img src="{{$invite_details['photo']}}" style="width: 100%; height:100%; border:1px solid black; border-radius: 50px 20px" alt="">
+            </div>
+        </div>
+        @endif
         <p style="font-size: 50px;"> you are cordially invited </p>
 
         <p>
@@ -46,7 +53,7 @@
     <div class="card">
         <div class="card-body">
             <div class="form-div">
-                <form action="{{route('save_invite')}}" method="POST">
+                <form action="{{route('save_invite')}}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <input type="hidden" name="event_name" value="{{$invite_details['event_name']}}">
                     <input type="hidden" name="event" value="{{$invite_details['event']}}">
@@ -85,6 +92,14 @@
                             Street Address
                         </label>
                         <input type="text" name="address" id="street" onkeyup="streetFn()" value="{{$invite_details['address']}}" />
+                    </div>
+                    <div class="form-group">
+                        <label for="image">
+                            Upload Image
+                        </label>
+                        <input type="file" class="form-control" name="photo">
+                        <input type="hidden" class="form-control" name="old_photo" value="{{$invite_details['photo']}}">
+                        <span class="text-danger"> @error('photo') {{$message}} @enderror </span>
                     </div>
 
                     <div class="form-group">

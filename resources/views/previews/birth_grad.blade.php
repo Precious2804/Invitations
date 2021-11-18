@@ -1,5 +1,12 @@
-<div id="myDiv" style="background-image: url(<?php echo $invite_details['template']; ?>);">
+<div id="myDiv" style="background-image: url(<?php echo $invite_details['template']; ?>);" >
     <div class="result-div">
+        @if($invite_details['photo'])
+        <div class="row d-flex justify-content-center">
+            <div class="col-lg-6">
+                <img src="{{$invite_details['photo']}}" style="width: 100%; height:100%; border:1px solid black; border-radius: 50px 20px" alt="">
+            </div>
+        </div>
+        @endif
         <p style="font-size: 50px;"> you are cordially invited </p>
 
         <p>

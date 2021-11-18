@@ -29,6 +29,7 @@ class Invites extends Model
         'color',
         'rsvp',
         'toast',
+        'photo',
         'template'
     ];
 

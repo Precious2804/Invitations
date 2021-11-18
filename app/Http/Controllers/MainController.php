@@ -254,6 +254,17 @@ class MainController extends Controller
 
     public function save_invite(Request $req)
     {
+        // $req->validate([
+        //     'photo' => 'mimes:png,jpg,jpeg,gif,svg,jfif|max:2048'
+        // ]);
+        if ($req->file()) {
+            $name = time() . '_' . $req->photo->getClientOriginalName();
+            $filePath = $req->file('photo')->storeAs('uploads', $name, 'public');
+            $storePhoto = '/storage/' . $filePath;
+        }
+        else {
+            $storePhoto = $req->old_photo;
+        }
         $data = Invites::where('invite_id', $req->invite_id)->first();
 
         $data->update([
@@ -274,7 +285,8 @@ class MainController extends Controller
             'color' => $req->color,
             'rsvp' => $req->rsvp,
             'toast' => $req->toast,
-            'event_name' => $req->event_name
+            'event_name' => $req->event_name,
+            'photo'=> $storePhoto
         ]);
 
         return back()->with('saved', "Invitation has been saved Successfully");
