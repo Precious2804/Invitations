@@ -5,6 +5,15 @@
 @endif
 <div id="myDiv" style="background-image: url(<?php echo $select_temp; ?>);" contenteditable="true">
     <div class="result-div">
+        @if($invite_details['photo'])
+        <div class="row d-flex justify-content-center">
+            <div class="col-lg-6">
+                <div class="box" style="box-shadow: 5px 10px #888888; border-radius: 50px 20px">
+                    <img src="{{$invite_details['photo']}}" style="width: 100%; height:100%; border-radius: 50px 20px" alt="">
+                </div>
+            </div>
+        </div>
+        @endif
         <p class="header-color">
             With extreme Gladness of heart, we the families of
         </p>
@@ -158,6 +167,15 @@
                             Color(s)
                         </label>
                         <input type="text" name="color" id="colorInput" value="{{$invite_details['color']}}" onkeyup="colorFn()">
+                    </div>
+                    <div class="form-group">
+                        <label for="image">
+                            Upload Image
+                        </label>
+                        <input type="file" class="form-control" name="photo">
+                        <input type="hidden" class="form-control" name="old_photo" value="{{$invite_details['photo']}}">
+                        <span class="text-muted">Hint: Use Images with transparent backgrounds</span>
+                        <span class="text-danger"> @error('photo') {{$message}} @enderror </span>
                     </div>
 
                     <div class="form-group">

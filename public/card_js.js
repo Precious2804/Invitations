@@ -27,6 +27,12 @@ function venueFn() {
 
     venueDet.innerHTML = `<span>${venueInput.value},</span>`
 }
+function colorFn() {
+    let colorInput = document.querySelector("#colorInput");
+    let color = document.querySelector(".color");
+
+    color.innerHTML = `<span>${colorInput.value},</span>`
+}
 
 function stateFn() {
     let stateInput = document.querySelector("#stateInput");
@@ -65,6 +71,18 @@ function celebrantFn() {
     let celebrant = document.querySelector(".celebrant");
 
     celebrant.innerHTML = `<span>${celebrantInput.value}</span>`
+}
+function departedFn() {
+    let departedInput = document.querySelector("#departedInput");
+    let departed = document.querySelector(".departed");
+
+    departed.innerHTML = `<span>${departedInput.value}</span>`
+}
+function durationFn() {
+    let durationInput = document.querySelector("#durationInput");
+    let duration = document.querySelector(".duration");
+
+    duration.innerHTML = `<span>${durationInput.value}</span>`
 }
 
 function groomFn() {

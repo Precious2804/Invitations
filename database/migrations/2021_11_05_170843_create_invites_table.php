@@ -31,6 +31,7 @@ class CreateInvitesTable extends Migration
             $table->string('venue')->nullable();
             $table->string('reception')->nullable();
             $table->string('address')->nullable();
+            $table->longText('duration')->nullable();
             $table->string('reception_address')->nullable();
             $table->string('color')->nullable();
             $table->string('rsvp')->nullable();

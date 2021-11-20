@@ -19,6 +19,7 @@ class MainController extends Controller
 {
     //
     use Generics;
+
     public function login()
     {
         return view('auth.login');
@@ -237,6 +238,7 @@ class MainController extends Controller
             'date' => $req->date,
             'time' => $req->time,
             'venue' => $req->venue,
+            'duration' => $req->duration,
             'reception' => $req->reception,
             'address' => $req->address,
             'reception_address' => $req->reception_address,
@@ -252,6 +254,7 @@ class MainController extends Controller
         }
     }
 
+
     public function save_invite(Request $req)
     {
         // $req->validate([
@@ -261,8 +264,7 @@ class MainController extends Controller
             $name = time() . '_' . $req->photo->getClientOriginalName();
             $filePath = $req->file('photo')->storeAs('uploads', $name, 'public');
             $storePhoto = '/storage/' . $filePath;
-        }
-        else {
+        } else {
             $storePhoto = $req->old_photo;
         }
         $data = Invites::where('invite_id', $req->invite_id)->first();
@@ -281,12 +283,13 @@ class MainController extends Controller
             'venue' => $req->venue,
             'reception' => $req->reception,
             'address' => $req->address,
+            'duration' => $req->duration,
             'reception_address' => $req->reception_address,
             'color' => $req->color,
             'rsvp' => $req->rsvp,
             'toast' => $req->toast,
             'event_name' => $req->event_name,
-            'photo'=> $storePhoto
+            'photo' => $storePhoto
         ]);
 
         return back()->with('saved', "Invitation has been saved Successfully");

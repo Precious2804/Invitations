@@ -25,6 +25,7 @@ class Invites extends Model
         'venue',
         'reception',
         'address',
+        'duration',
         'reception_address',
         'color',
         'rsvp',

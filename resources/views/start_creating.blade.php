@@ -89,10 +89,20 @@ $page = 'Start Creating Invitation'
                             <!-- Input for the venue ends -->
 
                             <!-- Input for address starts here -->
+                            @if($name != "funeral")
                             <div class="form-group col-lg-6">
                                 <label for="old_pass">Address:</label>
                                 <input type="text" name="address" placeholder="Input the Address">
                             </div>
+                            @endif
+
+                            @if($name == "funeral")
+                            <div class="form-group col-lg-6">
+                                <label for="old_pass">Duration Lived:</label>
+                                <input type="text" name="duration" placeholder="e.g. 1921 - 2099">
+                            </div>
+                            @endif
+
                             @if($name == "wedding")
                             <div class="form-group col-lg-6">
                                 <label for="old_pass">Reception Address:</label>

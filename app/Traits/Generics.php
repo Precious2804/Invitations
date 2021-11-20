@@ -46,4 +46,5 @@ trait Generics
         $random = $this->generateRand();
         return DB::table($table)->where($column, $random)->first() ? $this->createUniqueRand($table, $column) : $random;
     }
+
 }
