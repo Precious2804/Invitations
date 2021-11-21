@@ -8,7 +8,7 @@
         <p style="font-size: 35px; font-weight:bold"> TRANSITION TO GLORY</p>
         @if($invite_details['photo'])
         <div class="row d-flex justify-content-center">
-            <div class="col-lg-6">
+            <div class="col-lg-6" style="box-shadow: 5px 10px #888888; border-radius: 50px 20px">
                 <img src="{{$invite_details['photo']}}" style="width: 100%; height:100%; border-radius: 50px 20px" alt="">
             </div>
         </div>

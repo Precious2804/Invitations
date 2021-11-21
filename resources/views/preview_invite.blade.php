@@ -34,6 +34,8 @@ $page = 'Preview Invitations'
                                                 @include('previews.wedding')
                                                 @elseif($invite_details['event_name'] == "birthday" || $invite_details['event_name'] == "graduation")
                                                 @include('previews.birth_grad')
+                                                @elseif($invite_details['event_name'] == "funeral")
+                                                @include('previews.funeral')
                                                 @endif
 
                                             </div>

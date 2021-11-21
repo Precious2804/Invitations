@@ -217,7 +217,8 @@ class MainController extends Controller
         $invite_id = ['invite_id' => $invite_id];
 
         $page = 'create_invite';
-        return $this->dynamicPages($page)->with($select_temp)->with($invite_details)->with($invite_id);
+        $templates = ['templates' => Templates::all()];
+        return $this->dynamicPages($page)->with($select_temp)->with($invite_details)->with($invite_id)->with($templates);
     }
 
     public function create_now(Request $req)

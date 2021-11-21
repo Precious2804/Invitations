@@ -103,7 +103,7 @@ $page = 'Start Creating Invitation'
                             </div>
                             @endif
 
-                            @if($name == "wedding")
+                            @if($name == "wedding" || $name == "funeral")
                             <div class="form-group col-lg-6">
                                 <label for="old_pass">Reception Address:</label>
                                 <input type="text" name="reception_address" placeholder="Address for the Reception">

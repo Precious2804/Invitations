@@ -40,6 +40,21 @@ class DatabaseSeeder extends Seeder
             'name' => "Template2",
             'image' => "/storage/templates/1635164530_template2.png"
         ]);
+        $temp4 = \App\Models\Templates::create([
+            'temp_id' => $this->createUniqueID($table, $column),
+            'name' => "Template3",
+            'image' => "/storage/templates/1637421846_template3.png"
+        ]);
+        $temp5 = \App\Models\Templates::create([
+            'temp_id' => $this->createUniqueID($table, $column),
+            'name' => "Template4",
+            'image' => "/storage/templates/1637421864_template4.png"
+        ]);
+        $temp6 = \App\Models\Templates::create([
+            'temp_id' => $this->createUniqueID($table, $column),
+            'name' => "Template5",
+            'image' => "/storage/templates/1637421878_template5.png"
+        ]);
         $temp1 = \App\Models\Templates::create([
             'temp_id' => $this->createUniqueID($table, $column),
             'name' => "Blank Background",
