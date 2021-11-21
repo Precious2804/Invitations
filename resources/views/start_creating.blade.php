@@ -12,7 +12,8 @@ $page = 'Start Creating Invitation'
         <div class="col-lg-12">
             <div class="card">
                 <div class="card-header" style="text-align: center;">
-                    <h5 class="subtitle">Fill the Following Form to Create an Invitation for "{{$event}}"</h5>
+                    <h5 class="subtitle">Let's Help you create the perfect design for your event</h5>
+                    <h6 style="font-weight: lighter; font-style:oblique">Simply steps for suitable designs</h6>
                 </div>
                 <div class="card-body">
                     <form class="create_ticket_form mb-30-none" method="POST" action="{{route('create_now')}}">
@@ -44,8 +45,16 @@ $page = 'Start Creating Invitation'
                             </div>
                             @elseif($name == "seminar" or $name == "conference")
                             <div class="form-group col-lg-6">
-                                <label for="old_pass">Programme Title:</label>
+                                <label for="old_pass">Programme Title/Theme:</label>
                                 <input type="text" name="title" placeholder="What is the Title of the Programme?">
+                            </div>
+                            <div class="form-group col-lg-6">
+                                <label for="old_pass">Comapny Name/Presenter:</label>
+                                <input type="text" name="comapny_name" placeholder="Comapny name Here">
+                            </div>
+                            <div class="form-group col-lg-6">
+                                <label for="old_pass">Programme Topic:</label>
+                                <input type="text" name="topic" placeholder="What is the Topic of the Programme?">
                             </div>
                             @else
                             <div class="form-group col-lg-6">

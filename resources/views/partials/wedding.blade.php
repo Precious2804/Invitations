@@ -46,34 +46,36 @@
         <br>
         <div class="wedding-details2" style="font-size:15px">
             <div class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-4">
                     <span style="font-weight: bold;">Venue:</span>
                     <p class="venueDet">
                         {{$invite_details['venue']}}
                     </p>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-4">
                     <span style="font-weight: bold;">Address:</span>
                     <p class="streetAddress">
                         {{$invite_details['address']}}
                     </p>
-                </div> <br><br>
-                <div class="col-lg-6">
+                </div>
+                <div class="col-lg-4">
                     <span style="font-weight: bold;">Reception:</span>
                     <p class="receptionAddress">
                         {{$invite_details['reception']}}
                     </p>
+                    <br>
                 </div>
-                <div class="col-lg-6">
-                    <span style="font-weight: bold;">Toast:</span>
-                    <p class="toastStat" style="font-size:13px; font-family:cursive">
-                        {{$invite_details['toast']}}
-                    </p>
-                </div>
+                
                 <div class="col-lg-12">
                     <span style="font-weight: bold;">Color(s) of the day:</span>
                     <p class="colorStat">
                         {{$invite_details['color']}}
+                    </p>
+                </div>
+                <div class="col-lg-12">
+                    <span style="font-weight: bold;">Toast:</span>
+                    <p class="toastStat" style="font-size:13px; font-family:cursive">
+                        {{$invite_details['toast']}}
                     </p>
                 </div>
             </div>

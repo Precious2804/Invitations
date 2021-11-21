@@ -26,6 +26,8 @@ class CreateInvitesTable extends Migration
             $table->string('celebrant')->nullable();
             $table->string('event')->nullable();
             $table->string('event_name')->nullable();
+            $table->string('company_name')->nullable();
+            $table->string('topic')->nullable();
             $table->string('date')->nullable();
             $table->string('time')->nullable();
             $table->string('venue')->nullable();

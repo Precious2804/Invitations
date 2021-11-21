@@ -31,6 +31,8 @@ $page = 'Create Invitations'
                                                 @include('partials.birth_grad')
                                                 @elseif($invite_details['event_name'] == "funeral")
                                                 @include('partials.funeral')
+                                                @elseif($invite_details['event_name'] == "seminar" || $invite_details['event_name'] == "conference")
+                                                @include('partials.sem_conf')
                                                 @endif
 
                                             </div>

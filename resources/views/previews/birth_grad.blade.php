@@ -15,7 +15,7 @@
             to the {{$invite_details['event']}} of our dear
         </p>
 
-        <p class="name1-color celebrant" style="font-size:40px; text-transform:uppercase; font-weight:bold; font-family:Brush Script MT; font-style:oblique">
+        <p class="name2-color celebrant" style="font-size:40px; text-transform:uppercase; font-weight:bold; font-family:Brush Script MT; font-style:oblique">
             {{$invite_details['celebrant']}}
         </p>
         <p>

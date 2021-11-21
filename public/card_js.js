@@ -72,6 +72,24 @@ function celebrantFn() {
 
     celebrant.innerHTML = `<span>${celebrantInput.value}</span>`
 }
+function topicFn() {
+    let topicInput = document.querySelector("#topicInput");
+    let topic = document.querySelector(".topic");
+
+    topic.innerHTML = `<span>${topicInput.value}</span>`
+}
+function titleFn() {
+    let titleInput = document.querySelector("#titleInput");
+    let title = document.querySelector(".title");
+
+    title.innerHTML = `<span>${titleInput.value}</span>`
+}
+function companyFn() {
+    let companyInput = document.querySelector("#companyInput");
+    let company = document.querySelector(".company");
+
+    company.innerHTML = `<span>${companyInput.value}</span>`
+}
 function departedFn() {
     let departedInput = document.querySelector("#departedInput");
     let departed = document.querySelector(".departed");

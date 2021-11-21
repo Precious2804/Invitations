@@ -4,32 +4,39 @@
 </div>
 @endif
 <div id="myDiv" style="background-image: url(<?php echo $select_temp; ?>);" contenteditable="true">
-    <div class="result-div">
-        <p style="font-size: 35px; font-weight:bold"> TRANSITION TO GLORY</p>
-        @if($invite_details['photo'])
+    <div class="">
         <div class="row d-flex justify-content-center">
-            <div class="col-lg-6" style="box-shadow: 5px 10px #888888; border-radius: 50px 20px">
-                <img src="{{$invite_details['photo']}}" style="width: 100%; height:100%; border-radius: 50px 20px" alt="">
+            <p style="font-weight: bold; font-family:'Times New Roman', Times, serif; color:#660066">INVITATION! INVITATION!! INVITATION!!!</p>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-lg-12">
+                <p class="name2-color company" style="text-transform: uppercase; font-weight:bold;">{{$invite_details['company_name']}}</p>
+                <p>PRESENTS</p>
+                <br>
+                <p class="title" style="text-transform: uppercase; font-size:45px; font-weight:bolder; line-height:1.0; font-family:'Times New Roman', Times, serif">{{$invite_details['title']}}</p>
             </div>
         </div>
-        @endif
-        <br>
-        <span class="name2-color departed" style="font-size:40px; text-transform:uppercase; font-weight:bold; font-family:Brush Script MT;">
-            {{$invite_details['departed']}}
-        </span>
-        <span class="duration" style="font-size: 20px; font-family:cursive; font-weight:bold">{{$invite_details['duration']}}</span>
-        <hr>
+        <div class="row">
+            <div class="col-lg-6">
+                <span class="topic" style="text-transform: capitalize; font-weight:bold; line-height:1.0">{{$invite_details['topic']}}</span>
+                <br>
+                <br>
+                <br>
 
-        <div class="">
-            <p>Funeral service to take place at {{$invite_details['venue']}},</p>
-            <p>on the <span class="date">{{$invite_details['date']}}</span>, by <span class="time">{{$invite_details['time']}}</span></p>
+                <p style="font-size: 20px; font-weight:bolder"><span class="date">{{$invite_details['date']}}</span></p>
+                <p style="font-family:'Times New Roman', Times, serif; font-size:25px">TIME: <span class="time">{{$invite_details['time']}}</span></p>
+                <p>Venue: <span style="text-transform: capitalize; font-weight:bold" class="venueDet">{{$invite_details['venue']}}</span></p>
+            </div>
+            @if($invite_details['photo'])
+            <div class="col-lg-6">
+                <div class="box" style="border-radius: 50px 20px">
+                    <img src="{{$invite_details['photo']}}" style="width: 100%; height:100%; border-radius: 50px 20px" alt="">
+                </div>
+            </div>
+            @endif
         </div>
-        <br>
-        @if($invite_details['color'])
-        <div class="alert alert-primary">
-            Dress to celebrate life and mourn in <span class="color">{{$invite_details['color']}}</span>
-        </div>
-        @endif
+
     </div>
 </div>
 
@@ -38,6 +45,9 @@
 </div>
 </div>
 </div>
+
+
+
 
 <div class="col-lg-4">
     <div class="card">
@@ -50,15 +60,21 @@
                     <input type="hidden" name="invite_id" value="{{$invite_id}}">
                     <div class="hosted-by">
                         <label for="">
-                            Name of Departed
+                            Company Name
                         </label>
-                        <input type="text" name="departed" id="departedInput" onkeyup="departedFn()" value="{{$invite_details['departed']}}">
+                        <input type="text" name="company_name" id="companyInput" onkeyup="companyFn()" value="{{$invite_details['company_name']}}">
                     </div>
-                    <div>
+                    <div class="hosted-by">
                         <label for="">
-                            Duration of Life
+                            Programme Title/Theme
                         </label>
-                        <input type="text" name="duration" id="durationInput" onkeyup="durationFn()" value="{{$invite_details['duration']}}">
+                        <input type="text" name="title" id="titleInput" onkeyup="titleFn()" value="{{$invite_details['title']}}">
+                    </div>
+                    <div class="">
+                        <label for="">
+                            Programme Topic
+                        </label>
+                        <input type="text" name="topic" id="topicInput" onkeyup="topicFn()" value="{{$invite_details['topic']}}">
                     </div>
 
                     <div class="row">
@@ -76,19 +92,12 @@
                         </div>
                     </div>
 
-                    <div class="form-group">
+                    <div>
                         <label for="venueDet">
                             Venue
                         </label>
                         <input type="text" name="venue" id="venueInput" onkeyup="venueFn()" value="{{$invite_details['venue']}}" />
                     </div>
-                    <div class="form-group">
-                        <label for="">
-                            Color(s)
-                        </label>
-                        <input type="text" name="color" id="colorInput" onkeyup="colorFn()" value="{{$invite_details['color']}}" />
-                    </div>
-
                     <div class="form-group">
                         <label for="image">
                             Upload Image

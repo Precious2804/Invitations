@@ -9,7 +9,7 @@
         </div>
         @endif
         <br>
-        <span class="departed" style="font-size:40px; text-transform:uppercase; font-weight:bold; font-family:Brush Script MT;">
+        <span class="departed name2-color" style="font-size:40px; text-transform:uppercase; font-weight:bold; font-family:Brush Script MT;">
             {{$invite_details['departed']}}
         </span>
         <span class="duration" style="font-size: 20px; font-family:cursive; font-weight:bold">{{$invite_details['duration']}}</span>

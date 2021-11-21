@@ -20,6 +20,8 @@ class Invites extends Model
         'celebrant',
         'event',
         'event_name',
+        'company_name',
+        'topic',
         'date',
         'time',
         'venue',

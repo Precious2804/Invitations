@@ -36,6 +36,8 @@ $page = 'Preview Invitations'
                                                 @include('previews.birth_grad')
                                                 @elseif($invite_details['event_name'] == "funeral")
                                                 @include('previews.funeral')
+                                                @elseif($invite_details['event_name'] == "seminar" || $invite_details['event_name'] == "conference")
+                                                @include('previews.sem_conf')
                                                 @endif
 
                                             </div>
