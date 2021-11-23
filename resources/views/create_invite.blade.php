@@ -34,7 +34,6 @@ $page = 'Create Invitations'
                                                 @elseif($invite_details['event_name'] == "seminar" || $invite_details['event_name'] == "conference")
                                                 @include('partials.sem_conf')
                                                 @endif
-
                                             </div>
                         </section>
                     </main>

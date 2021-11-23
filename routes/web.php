@@ -49,6 +49,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/delete_invite/{invite_id}', [MainController::class, 'delete_invite'])->name('delete_invite');
     Route::get('/preview_invite/{invite_id}', [MainController::class, 'preview_invite'])->name('preview_invite');
     Route::get('/edit_invite/{invite_id}', [MainController::class, 'edit_invite'])->name('edit_invite');
+    Route::get('/change_temp', [MainController::class, 'change_temp'])->name('change_temp');
 });
 
 // AdminController routes

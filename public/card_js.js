@@ -80,9 +80,9 @@ function topicFn() {
 }
 function titleFn() {
     let titleInput = document.querySelector("#titleInput");
-    let title = document.querySelector(".title");
+    let titleDet = document.querySelector(".titleDet");
 
-    title.innerHTML = `<span>${titleInput.value}</span>`
+    titleDet.innerHTML = `<span>${titleInput.value}</span>`
 }
 function companyFn() {
     let companyInput = document.querySelector("#companyInput");

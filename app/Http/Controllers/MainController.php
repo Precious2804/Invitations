@@ -217,8 +217,7 @@ class MainController extends Controller
         $invite_id = ['invite_id' => $invite_id];
 
         $page = 'create_invite';
-        $templates = ['templates' => Templates::all()];
-        return $this->dynamicPages($page)->with($select_temp)->with($invite_details)->with($invite_id)->with($templates);
+        return $this->dynamicPages($page)->with($select_temp)->with($invite_details)->with($invite_id);
     }
 
     public function create_now(Request $req)
@@ -236,8 +235,8 @@ class MainController extends Controller
             'title' => $req->title,
             'celebrant' => $req->celebrant,
             'event' => $req->event,
-            'company_name'=>$req->company_name,
-            'topic'=>$req->topic,
+            'company_name' => $req->company_name,
+            'topic' => $req->topic,
             'date' => $req->date,
             'time' => $req->time,
             'venue' => $req->venue,
@@ -281,8 +280,8 @@ class MainController extends Controller
             'title' => $req->title,
             'celebrant' => $req->celebrant,
             'event' => $req->event,
-            'company_name'=>$req->company_name,
-            'topic'=>$req->topic,
+            'company_name' => $req->company_name,
+            'topic' => $req->topic,
             'date' => $req->date,
             'time' => $req->time,
             'venue' => $req->venue,
@@ -335,5 +334,15 @@ class MainController extends Controller
 
         $page = 'create_invite';
         return $this->dynamicPages($page)->with($select_temp)->with($invite_details)->with($invite_id);
+    }
+
+    public function change_temp(Request $req)
+    {
+        $data = Invites::where('invite_id', $req->invite_id)->first();
+        $data->update([
+            'template'=>$req->template
+        ]);
+        // return redirect()->to(route('edit_invite'));
+        return back()->with('saved', "Template design was changed Successfully");
     }
 }

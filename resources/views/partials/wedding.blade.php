@@ -82,6 +82,8 @@
         </div>
     </div>
 </div>
+<br>
+@include('partials.change_temp')
 
 
 </div>

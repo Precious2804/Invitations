@@ -2,6 +2,7 @@
 
 namespace App\Traits;
 
+use App\Models\Templates;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -16,7 +17,8 @@ trait Generics
         } else{
             $user = ['loggedUserInfo'=>User::where('user_id', Auth::user()->user_id)->first()];
         }
-        return view($page)->with($user);
+        $templates = ['templates' => Templates::all()];
+        return view($page)->with($user)->with($templates);
     }
 
     // a function that generates a random unique ID

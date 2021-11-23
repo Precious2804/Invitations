@@ -32,7 +32,8 @@
         @endif
     </div>
 </div>
-
+<br>
+@include('partials.change_temp')
 
 </div>
 </div>
