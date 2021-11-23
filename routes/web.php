@@ -32,6 +32,7 @@ Route::get('auth.register', [MainController::class, 'register'])->name('register
 Route::post('/do-register', [MainController::class, 'doRegister'])->name('do-register');
 Route::post('/do-login', [MainController::class, 'doLogin'])->name('do-login');
 Route::get('/choose_event', [MainController::class, 'choose_event'])->name('choose_event');
+Route::get('/invitation_detail', [MainController::class, 'invitation_detail'])->name('invitation_detail');
 
 
 Route::group(['middleware' => ['auth']], function () {

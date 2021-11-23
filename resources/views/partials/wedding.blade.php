@@ -3,7 +3,7 @@
     {{Session::get('saved')}}
 </div>
 @endif
-<div id="myDiv" style="background-image: url(<?php echo $select_temp; ?>);" contenteditable="true">
+<div id="myDiv" style="background-image: url(<?php echo $select_temp; ?>);">
     <div class="result-div">
         @if($invite_details['photo'])
         <div class="row d-flex justify-content-center">

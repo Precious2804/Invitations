@@ -1,4 +1,4 @@
-<div id="myDiv" style="background-image: url(<?php echo $invite_details['template']; ?>);" contenteditable="true">
+<div id="myDiv" style="background-image: url(<?php echo $invite_details['template']; ?>);">
     <div class="result-div">
         <p style="font-size: 35px; font-weight:bold"> TRANSITION TO GLORY</p>
         @if($invite_details['photo'])

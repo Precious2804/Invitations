@@ -3,8 +3,8 @@
     {{Session::get('saved')}}
 </div>
 @endif
-<div id="myDiv" style="background-image: url(<?php echo $select_temp; ?>);" contenteditable="true">
-    <div class="box" style="border: 1px solid black;">
+<div id="myDiv" style="background-image: url(<?php echo $select_temp; ?>);">
+    <div class="">
         <div style="padding: 10px;">
             <div class="row d-flex justify-content-center">
                 <p style="font-weight: bolder; font-family:'Times New Roman', Times, serif; color:#660066">INVITATION! INVITATION!! INVITATION!!!</p>
@@ -12,10 +12,10 @@
             <br>
             <div class="row">
                 <div class="col-lg-12">
-                    <p class="name2-color company" style="text-transform: uppercase; font-weight:bolder; font-family:'Times New Roman', Times, serif;">{{$invite_details['company_name']}}</p>
+                    <p class="text-dark company" style="text-transform: uppercase; font-weight:bolder; font-family:'Times New Roman', Times, serif;">{{$invite_details['company_name']}}</p>
                     <p>PRESENTS</p>
                     <br>
-                    <p class="titleDet" style="text-transform: uppercase; font-size:45px; font-weight:bolder; line-height:1.0; font-family:'Times New Roman', Times, serif; color:#4285F4">{{$invite_details['title']}}</p>
+                    <p class="titleDet text-danger" style="text-transform: uppercase; font-size:45px; font-weight:bolder; line-height:1.0; font-family:'Times New Roman', Times, serif;">{{$invite_details['title']}}</p>
                 </div>
             </div>
             <div class="row">

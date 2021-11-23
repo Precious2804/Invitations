@@ -340,9 +340,16 @@ class MainController extends Controller
     {
         $data = Invites::where('invite_id', $req->invite_id)->first();
         $data->update([
-            'template'=>$req->template
+            'template' => $req->template
         ]);
         // return redirect()->to(route('edit_invite'));
         return back()->with('saved', "Template design was changed Successfully");
+    }
+
+    public function invitation_detail(Request $req)
+    {
+        $page = 'invitation_detail';
+        $data = ['invite_details'=>Invites::where('invite_id', $req->invite)->first()];
+        return $this->dynamicPages($page)->with($data);
     }
 }

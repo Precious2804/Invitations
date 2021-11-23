@@ -27,9 +27,10 @@ $page = 'Preview Invitations'
                                                 <a href="/edit_invite/{{$invite_details['invite_id']}}">
                                                     <button class="btn btn-primary btn-sm" style="margin-bottom: 12px; margin-left:8px; height:50%">Edit Invite</button>
                                                 </a>
-                                                <a href="/delete_invite/{{$invite_details['invite_id']}}">
-                                                    <button class="btn btn-danger btn-sm" style="margin-bottom: 12px; margin-left:8px; height:50%">Delete</button>
-                                                </a>
+                                                <button class="btn btn-success btn-sm" style="margin-bottom: 12px; margin-left:8px; width:25%; height:50%" data-toggle="modal" data-target="#exampleModal2">Share</button>
+                                                <button class="btn btn-danger btn-sm" style="margin-bottom: 12px; margin-left:8px; width:25%; height:50%" data-toggle="modal" data-target="#exampleModal">Delete</button>
+
+
                                                 @if($invite_details['event_name'] == "wedding")
                                                 @include('previews.wedding')
                                                 @elseif($invite_details['event_name'] == "birthday" || $invite_details['event_name'] == "graduation")
@@ -43,7 +44,52 @@ $page = 'Preview Invitations'
                                             </div>
                         </section>
                     </main>
+
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Share this Invitation</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: 25%;">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Invitation Link Here
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" style="width: 25%;">Copy Link</button>
+                <a href="/invitation_detail?invite={{$invite_details['invite_id']}}" target="_blank">
+                    <button type="button" class="btn btn-secondary">View</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Delete this Invitation</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: 25%;">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Are you Sure you want to delete this Invitation? <br>
+                If yes, Click "Delete", if No, click "Cancel"
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-info" data-dismiss="modal" style="width: 25%;">Cancel</button>
+                <a href="/delete_invite/{{$invite_details['invite_id']}}">
+                    <button type="button" class="btn btn-danger">Delete</button>
+                </a>
             </div>
         </div>
     </div>
