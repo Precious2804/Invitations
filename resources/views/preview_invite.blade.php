@@ -61,10 +61,15 @@ $page = 'Preview Invitations'
                 </button>
             </div>
             <div class="modal-body">
-                Invitation Link Here
+                <label for="">
+                    Invitation Link Here
+                </label>
+                <div class="form-group">
+                    <input type="text" id="box" class="form-control" value="{{route('invitation_detail')}}?invite={{$invite_details['invite_id']}}" style="border-color: green;" readonly>
+                </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary" style="width: 25%;">Copy Link</button>
+                <button type="button" id="button" class="btn btn-primary" style="width: 25%;">Copy Link</button>
                 <a href="/invitation_detail?invite={{$invite_details['invite_id']}}" target="_blank">
                     <button type="button" class="btn btn-secondary">View</button>
                 </a>
@@ -94,5 +99,16 @@ $page = 'Preview Invitations'
         </div>
     </div>
 </div>
+
+<script>
+    let box = document.getElementById("box");
+    let button = document.getElementById("button");
+    button.onclick = function() {
+        box.select();
+        document.execCommand("copy");
+        button.innerText = "Copied!"
+        button.style.background = "#F7B902"
+    }
+</script>
 
 @stop
