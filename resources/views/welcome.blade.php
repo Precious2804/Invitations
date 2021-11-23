@@ -58,7 +58,7 @@
                         <div class="col-6">
                             <ul class="support-area">
                                 <li>
-                                    <a href="Mailto:anipreciousebuka@gmail.com"><i class="flaticon-email"></i><span class="__cf_email__" data-cfemail="f69f989099b69e8f9f869a979892d895999b"></span> anipreciousebuka@gmail.com </a>
+                                    <a href="Mailto:admin@gmail.com"><i class="flaticon-email"></i><span class="__cf_email__" data-cfemail="f69f989099b69e8f9f869a979892d895999b"></span> admin@gmail.com </a>
                                 </li>
                             </ul>
                         </div>
@@ -90,9 +90,9 @@
                             <li>
                                 <a href="#about">About</a>
                             </li>
-                            <li>
+                            <!-- <li>
                                 <a href="#feature">Features</a>
-                            </li>
+                            </li> -->
                             <li>
                                 <a href="#call">Contact</a>
                             </li>
@@ -178,59 +178,6 @@
         </section>
         <!--=======Banner-Section Ends Here=======-->
 
-
-        <!-- =======Counter-Section Starts Here=======-->
-        <!-- <div class="counter-section">
-            <div class="container">
-                <div class="row align-items-center mb-30-none justify-content-center">
-                    <div class="col-sm-6 col-md-4">
-                        <div class="counter-item">
-                            <div class="counter-thumb">
-                                <img src="assets/images/counter/counter01.png" alt="counter">
-                            </div>
-                            <div class="counter-content">
-                                <div class="counter-header">
-                                    <h3 class="title odometer" data-odometer-final="36.9">0</h3>
-                                    <h3 class="title">M</h3>
-                                </div>
-                                <p>Registered users</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4">
-                        <div class="counter-item">
-                            <div class="counter-thumb">
-                                <img src="assets/images/counter/counter02.png" alt="counter">
-                            </div>
-                            <div class="counter-content">
-                                <div class="counter-header">
-                                    <h3 class="title odometer" data-odometer-final="174">0</h3>
-                                </div>
-                                <p>Countries Supported</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4">
-                        <div class="counter-item">
-                            <div class="counter-thumb">
-                                <img src="assets/images/counter/counter03.png" alt="counter">
-                            </div>
-                            <div class="counter-content">
-                                <div class="counter-header">
-                                    <h3 class="title">$</h3>
-                                    <h3 class="odometer title" data-odometer-final="10.8">0</h3>
-                                    <h3 class="title">M</h3>
-                                </div>
-                                <p>Average Investment</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-        <!--=======Counter-Section Ends Here======= -->
-
-
         <!--=======About-Section Starts Here=======-->
         <section class="about-section padding-top padding-bottom" id="about">
             <div class="container">
@@ -243,10 +190,14 @@
                             <span class="cate">WELCOME TO {{env('APP_NAME')}}</span>
                             <h2 class="title">about {{env('APP_NAME')}}</h2>
                             <p>
-                                {{env('APP_NAME')}} is an investment company, whose team is working on making money from the volatility of cryptocurrencies and offer great returns to our clients.
+                                {{env('APP_NAME')}} is an advance digital technology, that aims at bringing the world together via the internet space, and solving problems that has been caused by non-digital invitation processes. At {{env('APP_NAME')}} we see ourselves as a part of your amazing journey and likewise fun-time with family, friends and Loved ones.
+                            </p>
+                            <p>
+                                We also understand how important personal touch is;
+                                that is why we offer our users online design tools that allow them to customize and create beautiful invitations.
                             </p>
                         </div>
-                        <div class="about--content">
+                        <!-- <div class="about--content">
                             <div class="about-item">
                                 <div class="about-thumb">
                                     <img src="assets/images/about/about01.png" alt="about">
@@ -258,7 +209,7 @@
                                     </p>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -267,7 +218,7 @@
 
 
         <!--=======Feature-Section Starts Here=======-->
-        <section class="feature-section padding-top padding-bottom bg_img" data-background="./assets/images/feature/feature-bg.png" id="feature">
+        <!-- <section class="feature-section padding-top padding-bottom bg_img" data-background="./assets/images/feature/feature-bg.png" id="feature">
             <div class="ball-1" data-paroller-factor="-0.30" data-paroller-factor-lg="0.60" data-paroller-type="foreground" data-paroller-direction="horizontal">
                 <img src="assets/images/balls/ball1.png" alt="balls">
             </div>
@@ -328,7 +279,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
         <!--=======Feature-Section Ends Here=======-->
 
         <!--=======Check-Section Starts Here=======-->
@@ -354,64 +305,6 @@
         </section>
         <!--=======Check-Section Ends Here=======-->
 
-        <!--=======Affiliate-Section Starts Here=======-->
-        <section class="affiliate-programe" id="affiliate">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-7 padding-bottom padding-top">
-                        <div class="section-header left-style">
-                            <span class="cate">What You’ll Get As</span>
-                            <h2 class="title fz-md-49">Affiliate Program</h2>
-                            <p>
-                                We give you the opportunity to earn money by recommending our website to others. You can start earning money even if you do not invest.
-                            </p>
-                        </div>
-                        <div class="affiliate-wrapper">
-                            <div class="affiliate-item">
-                                <div class="affiliate-inner">
-                                    <div class="affiliate-thumb">
-                                        <h3 class="title">2</h3>
-                                        <span class="remainder">%</span>
-                                        <span class="cont">1st</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="affiliate-item cl-two">
-                                <div class="affiliate-inner">
-                                    <div class="affiliate-thumb">
-                                        <h3 class="title">5</h3>
-                                        <span class="remainder">%</span>
-                                        <span class="cont">2nd</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="affiliate-item cl-three">
-                                <div class="affiliate-inner">
-                                    <div class="affiliate-thumb">
-                                        <h3 class="title">12</h3>
-                                        <span class="remainder">%</span>
-                                        <span class="cont">3rd</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="affiliate-bottom">
-                            <h6 class="title">Make money with {{env('APP_NAME')}}</h6>
-                            <a href="#0" class="custom-button">
-                                learn more <i class="flaticon-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-5 d-lg-block d-none">
-                        <div class="afiliate-thumb">
-                            <img src="assets/images/affiliate/affiliate.png" alt="affiliate">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--=======Affiliate-Section Ends Here=======-->
-
         <!--=======Check-Section Starts Here=======-->
         <section class="client-section padding-bottom padding-top">
             <div class="background-map">
@@ -422,9 +315,9 @@
                     <div class="col-lg-8 col-md-10">
                         <div class="section-header left-style">
                             <span class="cate">TESTIMONIALS</span>
-                            <h2 class="title"><span>40,000</span> HAPPY CLIENTS AROUND THE WORLD</h2>
+                            <h2 class="title"><span>40,000</span> HAPPY USERS AROUND THE WORLD</h2>
                             <p class="mw-500">
-                                We have many happy investors invest with us .Some impresions from our Customers!
+                                We have many happy users that works with us. Some impresions from our Customers!
                             </p>
                         </div>
                     </div>
