@@ -14,4 +14,7 @@
         </div>
         @endforeach
     </div>
+    <div class="row">
+        {!! $templates->links() !!}
+    </div>
 </div>
