@@ -46,26 +46,30 @@
         <br>
         <div class="wedding-details2" style="font-size:15px">
             <div class="row">
-                <div class="col-lg-4">
+                <div class="col-lg-6">
                     <span style="font-weight: bold;">Venue:</span>
                     <p class="venueDet">
                         {{$invite_details['venue']}}
                     </p>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-6">
                     <span style="font-weight: bold;">Address:</span>
                     <p class="streetAddress">
                         {{$invite_details['address']}}
                     </p>
-                </div>
-                <div class="col-lg-4">
+                </div> <br><br>
+                <div class="col-lg-6">
                     <span style="font-weight: bold;">Reception:</span>
                     <p class="receptionAddress">
                         {{$invite_details['reception']}}
                     </p>
-                    <br>
                 </div>
-                
+                <div class="col-lg-6">
+                    <span style="font-weight: bold;">Toast:</span>
+                    <p class="toastStat" style="font-size:13px; font-family:cursive">
+                        {{$invite_details['toast']}}
+                    </p>
+                </div>
                 <div class="col-lg-12">
                     <span style="font-weight: bold;">Color(s) of the day:</span>
                     <p class="colorStat">
@@ -73,9 +77,9 @@
                     </p>
                 </div>
                 <div class="col-lg-12">
-                    <span style="font-weight: bold;">Toast:</span>
-                    <p class="toastStat" style="font-size:13px; font-family:cursive">
-                        {{$invite_details['toast']}}
+                    <span style="font-weight: bold;">RSVP</span>
+                    <p class="rsvpStat">
+                        {{$invite_details['rsvp']}}
                     </p>
                 </div>
             </div>
@@ -171,6 +175,12 @@
                             Color(s)
                         </label>
                         <input type="text" name="color" id="colorInput" value="{{$invite_details['color']}}" onkeyup="colorFn()">
+                    </div>
+                    <div>
+                        <label for="rsvpStat">
+                            RSVP(s)
+                        </label>
+                        <input type="text" name="rsvp" id="rsvpInput" value="{{$invite_details['rsvp']}}" onkeyup="rsvpFn()">
                     </div>
                     <div class="form-group">
                         <label for="image">

@@ -42,6 +42,12 @@
             </p>
 
         </div>
+        <div class="col-lg-12">
+            <span style="font-weight: bold;">RSVP</span>
+            <p class="rsvpStat">
+                {{$invite_details['rsvp']}}
+            </p>
+        </div>
     </div>
 </div>
 <br>
@@ -96,6 +102,12 @@
                             Street Address
                         </label>
                         <input type="text" name="address" id="street" onkeyup="streetFn()" value="{{$invite_details['address']}}" />
+                    </div>
+                    <div>
+                        <label for="rsvpStat">
+                            RSVP(s)
+                        </label>
+                        <input type="text" name="rsvp" id="rsvpInput" value="{{$invite_details['rsvp']}}" onkeyup="rsvpFn()">
                     </div>
                     <div class="form-group">
                         <label for="image">

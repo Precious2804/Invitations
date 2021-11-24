@@ -25,6 +25,12 @@
             Dress to celebrate life and mourn in <span class="color">{{$invite_details['color']}}</span>
         </div>
         @endif
+        <div class="col-lg-12">
+            <span style="font-weight: bold;">RSVP</span>
+            <p class="rsvpStat">
+                {{$invite_details['rsvp']}}
+            </p>
+        </div>
     </div>
 </div>
 

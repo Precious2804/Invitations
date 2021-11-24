@@ -37,6 +37,12 @@
             </p>
 
         </div>
+        <div class="col-lg-12">
+            <span style="font-weight: bold;">RSVP</span>
+            <p class="rsvpStat">
+                {{$invite_details['rsvp']}}
+            </p>
+        </div>
     </div>
 </div>
 

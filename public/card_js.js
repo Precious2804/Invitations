@@ -21,6 +21,12 @@ function colorFn() {
 
     colorStat.innerHTML = `<span>${colorInput.value},</span>`
 }
+function rsvpFn() {
+    let rsvpInput = document.querySelector("#rsvpInput");
+    let rsvpStat = document.querySelector(".rsvpStat");
+
+    rsvpStat.innerHTML = `<span>${rsvpInput.value},</span>`
+}
 function venueFn() {
     let venueInput = document.querySelector("#venueInput");
     let venueDet = document.querySelector(".venueDet");
