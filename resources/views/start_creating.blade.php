@@ -50,7 +50,7 @@ $page = 'Start Creating Invitation'
                             </div>
                             <div class="form-group col-lg-6">
                                 <label for="old_pass">Comapny Name/Presenter:</label>
-                                <input type="text" name="comapny_name" placeholder="Comapny name Here">
+                                <input type="text" name="company_name" placeholder="Company name Here">
                             </div>
                             <div class="form-group col-lg-6">
                                 <label for="old_pass">Programme Topic:</label>

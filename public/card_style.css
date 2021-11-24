@@ -5,6 +5,14 @@
     margin: 0;
     box-sizing: border-box;
 }
+p{
+    color: black;
+    font-weight: bolder;
+}
+span{
+    color: #7F7F7F;
+    font-weight: bold;
+}
 
 body, html {
     scroll-behavior: smooth;

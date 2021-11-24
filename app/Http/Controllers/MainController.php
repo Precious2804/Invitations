@@ -217,7 +217,8 @@ class MainController extends Controller
         $invite_id = ['invite_id' => $invite_id];
 
         $page = 'create_invite';
-        return $this->dynamicPages($page)->with($select_temp)->with($invite_details)->with($invite_id);
+        $templates = ['templates' => Templates::paginate(6)->appends(request()->query())];
+        return $this->dynamicPages($page)->with($select_temp)->with($invite_details)->with($invite_id)->with($templates);
     }
 
     public function create_now(Request $req)
@@ -343,13 +344,17 @@ class MainController extends Controller
             'template' => $req->template
         ]);
         // return redirect()->to(route('edit_invite'));
-        return back()->with('saved', "Template design was changed Successfully");
+        if (route('create_invite')) {
+            return redirect(route('create_invite') . "?template=" . $data['template'] . "&invite_id=" . $req->invite_id);
+        } else {
+            return back()->with('saved', "Template design was changed Successfully");
+        }
     }
 
     public function invitation_detail(Request $req)
     {
         $page = 'invitation_detail';
-        $data = ['invite_details'=>Invites::where('invite_id', $req->invite)->first()];
+        $data = ['invite_details' => Invites::where('invite_id', $req->invite)->first()];
         return $this->dynamicPages($page)->with($data);
     }
 }

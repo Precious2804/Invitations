@@ -26,7 +26,7 @@
         </div>
         <br>
         @if($invite_details['color'])
-        <div class="alert alert-primary">
+        <div class="alert alert-muted">
             Dress to celebrate life and mourn in <span class="color">{{$invite_details['color']}}</span>
         </div>
         @endif

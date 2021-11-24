@@ -66,7 +66,7 @@
                 </div>
                 <div class="col-lg-6">
                     <span style="font-weight: bold;">Toast:</span>
-                    <p class="toastStat" style="font-size:13px; font-family:cursive">
+                    <p class="toastStat" style="font-size:13px;">
                         {{$invite_details['toast']}}
                     </p>
                 </div>

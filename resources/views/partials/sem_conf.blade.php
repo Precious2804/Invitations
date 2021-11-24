@@ -3,7 +3,7 @@
     {{Session::get('saved')}}
 </div>
 @endif
-<div id="myDiv" style="background-image: url(<?php echo $select_temp; ?>);">
+<div id="myDiv" style="background-image: url(<?php echo $invite_details['template']; ?>);">
     <div class="">
         <div style="padding: 10px;">
             <div class="row d-flex justify-content-center">

@@ -17,7 +17,7 @@ trait Generics
         } else{
             $user = ['loggedUserInfo'=>User::where('user_id', Auth::user()->user_id)->first()];
         }
-        $templates = ['templates' => Templates::paginate(6)];
+        $templates = ['templates' => Templates::paginate(10)];
         return view($page)->with($user)->with($templates);
     }
 
