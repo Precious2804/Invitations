@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="assets/css/flaticon.css">
     <link rel="stylesheet" href="assets/css/main.css">
 
-    <link rel="shortcut icon" href="{{URL::asset('favicon.ico')}}" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 
 <body>
@@ -80,7 +80,7 @@
                     <div class="header-area">
                         <div class="logo">
                             <a href="{{route('/')}}">
-                                <img src="{{URL::asset('assets/images/invitation_logo.png')}}" alt="logo">
+                                <img src="assets/images/invitation_logo.png" alt="logo">
                             </a>
                         </div>
                         <ul class="menu">
@@ -119,48 +119,48 @@
             </div>
             <div class="banner-bg d-none d-lg-block bg_img" data-background="assets/images/banner/banner.jpg">
                 <div class="chart-1 wow fadeInLeft" data-wow-delay=".5s" data-wow-duration=".7s">
-                    <img src="{{URL::asset('assets/images/banner/chart1.png')}}" alt="banner">
+                    <img src="assets/images/banner/chart1.png" alt="banner">
                 </div>
                 <div class="chart-2 wow fadeInDown" data-wow-delay="1s" data-wow-duration=".7s">
-                    <img src="{{URL::asset('assets/images/banner/chart2.png')}}" alt="banner">
+                    <img src="assets/images/banner/chart2.png" alt="banner">
                 </div>
                 <div class="chart-3 wow fadeInRight" data-wow-delay="1.5s" data-wow-duration=".7s">
-                    <img src="{{URL::asset('assets/images/banner/chart3.png')}}" alt="banner">
+                    <img src="assets/images/banner/chart3.png" alt="banner">
                 </div>
                 <div class="chart-4 wow fadeInUp" data-wow-delay="2s" data-wow-duration=".7s">
-                    <img src="{{URL::asset('assets/images/banner/clock.png')}}" alt="banner">
+                    <img src="assets/images/banner/clock.png" alt="banner">
                 </div>
             </div>
             <div class="animation-area d-none d-lg-block">
                 <div class="plot">
-                    <img src="{{URL::asset('assets/images/banner/plot.png')}}" alt="banner">
+                    <img src="assets/images/banner/plot.png" alt="banner">
                 </div>
                 <div class="element-1 wow fadeIn" data-wow-delay="1s">
-                    <img src="{{URL::asset('assets/images/banner/light.png')}}" alt="banner">
+                    <img src="assets/images/banner/light.png" alt="banner">
                 </div>
                 <div class="element-2 wow fadeIn" data-wow-delay="1s">
-                    <img src="{{URL::asset('assets/images/banner/coin1.png')}}" alt="banner">
+                    <img src="assets/images/banner/coin1.png" alt="banner">
                 </div>
                 <div class="element-3 wow fadeIn" data-wow-delay="1s">
-                    <img src="{{URL::asset('assets/images/banner/coin2.png')}}" alt="banner">
+                    <img src="assets/images/banner/coin2.png" alt="banner">
                 </div>
                 <div class="element-4 wow fadeIn" data-wow-delay="1s">
-                    <img src="{{URL::asset('assets/images/banner/coin3.png')}}" alt="banner">
+                    <img src="assets/images/banner/coin3.png" alt="banner">
                 </div>
                 <div class="element-5 wow fadeIn" data-wow-delay="1s">
-                    <img src="{{URL::asset('assets/images/banner/coin4.png')}}" alt="banner">
+                    <img src="assets/images/banner/coin4.png" alt="banner">
                 </div>
                 <div class="element-6 wow fadeIn" data-wow-delay="1s">
-                    <img src="{{URL::asset('assets/images/banner/coin5.png')}}" alt="banner">
+                    <img src="assets/images/banner/coin5.png" alt="banner">
                 </div>
                 <div class="element-7 wow fadeIn" data-wow-delay="1s">
-                    <img src="{{URL::asset('assets/images/banner/coin6.png')}}" alt="banner">
+                    <img src="assets/images/banner/coin6.png" alt="banner">
                 </div>
                 <div class="element-8 wow fadeIn" data-wow-delay="1s">
-                    <img src="{{URL::asset('assets/images/banner/sheild.png')}}" alt="banner">
+                    <img src="assets/images/banner/sheild.png" alt="banner">
                 </div>
                 <div class="element-9 wow fadeIn" data-wow-delay="1s">
-                    <img src="{{URL::asset('assets/images/banner/coin7.png')}}" alt="banner">
+                    <img src="assets/images/banner/coin7.png" alt="banner">
                 </div>
             </div>
             <div class="container">
@@ -183,7 +183,7 @@
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-6 d-none d-lg-block rtl">
-                        <img src="{{URL::asset('assets/images/about/about.png')}}" alt="about">
+                        <img src="assets/images/about/about.png" alt="about">
                     </div>
                     <div class="col-lg-6">
                         <div class="section-header left-style">
@@ -283,7 +283,7 @@
         <!--=======Feature-Section Ends Here=======-->
 
         <!--=======Check-Section Starts Here=======-->
-        <section class="call-section call-overlay bg_img" data-background="{{URL::asset('assets/images/call/call-bg.jpg')}}" id="call">
+        <section class="call-section call-overlay bg_img" data-background="assets/images/call/call-bg.jpg" id="call">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-7">
@@ -295,7 +295,7 @@
                     <div class="col-lg-5">
                         <div class="call-button">
                             <a href="Tel:08176157244" class="call">
-                                <img src="{{URL::asset('assets/images/call/icon02.png')}}" alt="call">
+                                <img src="assets/images/call/icon02.png" alt="call">
                             </a>
                             <a href="#0" class="custom-button"> Contact Support</a>
                         </div>
@@ -308,7 +308,7 @@
         <!--=======Check-Section Starts Here=======-->
         <section class="client-section padding-bottom padding-top">
             <div class="background-map">
-                <img src="{{URL::asset('assets/images/client/client-bg.png')}}" alt="client">
+                <img src="assets/images/client/client-bg.png" alt="client">
             </div>
             <div class="container">
                 <div class="row">
@@ -351,7 +351,7 @@
                                     </div>
                                     <div class="client-thumb">
                                         <a href="#0">
-                                            <img src="{{URL::asset('assets/images/client/client01.png')}}" alt="client">
+                                            <img src="assets/images/client/client01.png" alt="client">
                                         </a>
                                     </div>
                                 </div>
@@ -380,7 +380,7 @@
                                     </div>
                                     <div class="client-thumb">
                                         <a href="#0">
-                                            <img src="{{URL::asset('assets/images/client/client02.png')}}" alt="client">
+                                            <img src="assets/images/client/client02.png" alt="client">
                                         </a>
                                     </div>
                                 </div>
@@ -409,7 +409,7 @@
                                     </div>
                                     <div class="client-thumb">
                                         <a href="#0">
-                                            <img src="{{URL::asset('assets/images/client/client03.png')}}" alt="client">
+                                            <img src="assets/images/client/client03.png" alt="client">
                                         </a>
                                     </div>
                                 </div>
@@ -436,24 +436,24 @@
                             </form>
                         </div>
                         <div class="newslater-thumb">
-                            <img src="{{URL::asset('assets/images/footer/footer.png')}}" alt="footer">
+                            <img src="assets/images/footer/footer.png" alt="footer">
                             <div class="coin-1">
-                                <img src="{{URL::asset('assets/images/footer/Coin_01.png')}}" alt="footer">
+                                <img src="assets/images/footer/Coin_01.png" alt="footer">
                             </div>
                             <div class="coin-2">
-                                <img src="{{URL::asset('assets/images/footer/Coin_02.png')}}" alt="footer">
+                                <img src="assets/images/footer/Coin_02.png" alt="footer">
                             </div>
                             <div class="coin-3">
-                                <img src="{{URL::asset('assets/images/footer/Coin_03.png')}}" alt="footer">
+                                <img src="assets/images/footer/Coin_03.png" alt="footer">
                             </div>
                             <div class="coin-4">
-                                <img src="{{URL::asset('assets/images/footer/Coin_04.png')}}" alt="footer">
+                                <img src="assets/images/footer/Coin_04.png" alt="footer">
                             </div>
                             <div class="coin-5">
-                                <img src="{{URL::asset('assets/images/footer/Coin_05.png')}}" alt="footer">
+                                <img src="assets/images/footer/Coin_05.png" alt="footer">
                             </div>
                             <div class="coin-6">
-                                <img src="{{URL::asset('assets/images/footer/Coin_06.png')}}" alt="footer">
+                                <img src="assets/images/footer/Coin_06.png" alt="footer">
                             </div>
                         </div>
                     </div>
@@ -463,7 +463,7 @@
                 <div class="footer-top">
                     <div class="logo">
                         <a href="{{route('/')}}">
-                            <img src="{{URL::asset('assets/images/invitation_white.png')}}" alt="logo">
+                            <img src="assets/images/invitation_white.png" alt="logo">
                         </a>
                     </div>
                     <ul class="links">
