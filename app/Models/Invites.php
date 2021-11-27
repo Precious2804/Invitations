@@ -33,7 +33,8 @@ class Invites extends Model
         'rsvp',
         'toast',
         'photo',
-        'template'
+        'template',
+        'video_url'
     ];
 
     public $incrementing = 'false';

@@ -40,6 +40,7 @@ class CreateInvitesTable extends Migration
             $table->longText('toast')->nullable();
             $table->string('photo')->nullable();
             $table->string('template')->nullable();
+            $table->string('video_url')->nullable();
             $table->timestamps();
         });
     }

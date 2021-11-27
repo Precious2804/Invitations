@@ -84,9 +84,6 @@
                             <a href="{{route('all_saves')}}"><i class="fas fa-mail-bulk"></i>Saved Invites</a>
                         </li>
                         <li>
-                            <a href=""><i class="fas fa-video"></i>Make a Video</a>
-                        </li>
-                        <li>
                             <a href="{{route('logout')}}"><i style="color: red;" class="fas fa-sign-out-alt"></i>Logout</a>
                         </li>
                         @else

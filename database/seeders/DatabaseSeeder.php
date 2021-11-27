@@ -173,7 +173,7 @@ class DatabaseSeeder extends Seeder
             'name'=>'graduation'
         ]);
         $event5 = \App\Models\EventType::create([
-            'event_name'=>"Seminar",
+            'event_name'=>"Seminar/Crusade",
             'no_of_celebrant'=>"1",
             'name'=>'seminar'
         ]);

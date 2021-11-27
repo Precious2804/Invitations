@@ -42,12 +42,7 @@
             </p>
 
         </div>
-        <div class="col-lg-12">
-            <span style="font-weight: bold;">RSVP</span>
-            <p class="rsvpStat">
-                {{$invite_details['rsvp']}}
-            </p>
-        </div>
+        @include('partials.rsvp_video')
     </div>
 </div>
 <br>
@@ -117,6 +112,14 @@
                         <input type="hidden" class="form-control" name="old_photo" value="{{$invite_details['photo']}}">
                         <span class="text-muted">Hint: Use Images with transparent backgrounds</span>
                         <span class="text-danger"> @error('photo') {{$message}} @enderror </span>
+                    </div>
+                    <div class="form-group">
+                        <label for="">
+                            Video URL:
+                        </label>
+                        <input type="url" name="video_url" id="" class="form-control" placeholder="Enter video url here" value="{{$invite_details['video_url']}}">
+                        <span class="text-muted">Hint: Use links to a youtube video/ an alternative video link</span>
+                        <span class="text-danger"> @error('video_url') {{$message}} @enderror </span>
                     </div>
 
                     <div class="form-group">

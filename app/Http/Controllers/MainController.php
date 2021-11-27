@@ -260,6 +260,11 @@ class MainController extends Controller
 
     public function save_invite(Request $req)
     {
+        if($req->video_url){
+            $req->validate([
+                'video_url'=>'url'
+            ]);
+        }
         // $req->validate([
         //     'photo' => 'mimes:png,jpg,jpeg,gif,svg,jfif|max:2048'
         // ]);
@@ -294,7 +299,8 @@ class MainController extends Controller
             'rsvp' => $req->rsvp,
             'toast' => $req->toast,
             'event_name' => $req->event_name,
-            'photo' => $storePhoto
+            'photo' => $storePhoto,
+            'video_url'=>$req->video_url
         ]);
 
         return back()->with('saved', "Invitation has been saved Successfully");
