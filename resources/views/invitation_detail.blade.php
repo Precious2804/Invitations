@@ -1,5 +1,5 @@
 <?php
-$page = 'Invitation Details'
+$page = 'Invitation Card Details'
 ?>
 
 @extends('layout')

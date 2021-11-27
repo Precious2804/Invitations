@@ -97,7 +97,7 @@
                                 <a href="#call">Contact</a>
                             </li>
                             <li class="pr-0">
-                                <a href="{{route('choose_event')}}" class="custom-button">Start Exploring</a>
+                                <a href="{{route('choose_event')}}" class="custom-button">Explore Now</a>
                             </li>
                         </ul>
                         <div class="header-bar d-lg-none">
@@ -117,8 +117,8 @@
             <div class="banner-bg d-lg-none">
                 <img src="assets/images/banner/banner-bg2.jpg" alt="banner">
             </div>
-            <div class="banner-bg d-none d-lg-block bg_img" data-background="assets/images/banner/banner.jpg">
-                <div class="chart-1 wow fadeInLeft" data-wow-delay=".5s" data-wow-duration=".7s">
+            <div class="banner-bg d-none d-lg-block bg_img" data-background="assets/images/01.jfif">
+                <!-- <div class="chart-1 wow fadeInLeft" data-wow-delay=".5s" data-wow-duration=".7s">
                     <img src="assets/images/banner/chart1.png" alt="banner">
                 </div>
                 <div class="chart-2 wow fadeInDown" data-wow-delay="1s" data-wow-duration=".7s">
@@ -129,7 +129,7 @@
                 </div>
                 <div class="chart-4 wow fadeInUp" data-wow-delay="2s" data-wow-duration=".7s">
                     <img src="assets/images/banner/clock.png" alt="banner">
-                </div>
+                </div> -->
             </div>
             <div class="animation-area d-none d-lg-block">
                 <div class="plot">
@@ -138,36 +138,13 @@
                 <div class="element-1 wow fadeIn" data-wow-delay="1s">
                     <img src="assets/images/banner/light.png" alt="banner">
                 </div>
-                <div class="element-2 wow fadeIn" data-wow-delay="1s">
-                    <img src="assets/images/banner/coin1.png" alt="banner">
-                </div>
-                <div class="element-3 wow fadeIn" data-wow-delay="1s">
-                    <img src="assets/images/banner/coin2.png" alt="banner">
-                </div>
-                <div class="element-4 wow fadeIn" data-wow-delay="1s">
-                    <img src="assets/images/banner/coin3.png" alt="banner">
-                </div>
-                <div class="element-5 wow fadeIn" data-wow-delay="1s">
-                    <img src="assets/images/banner/coin4.png" alt="banner">
-                </div>
-                <div class="element-6 wow fadeIn" data-wow-delay="1s">
-                    <img src="assets/images/banner/coin5.png" alt="banner">
-                </div>
-                <div class="element-7 wow fadeIn" data-wow-delay="1s">
-                    <img src="assets/images/banner/coin6.png" alt="banner">
-                </div>
-                <div class="element-8 wow fadeIn" data-wow-delay="1s">
-                    <img src="assets/images/banner/sheild.png" alt="banner">
-                </div>
-                <div class="element-9 wow fadeIn" data-wow-delay="1s">
-                    <img src="assets/images/banner/coin7.png" alt="banner">
-                </div>
             </div>
             <div class="container">
                 <div class="row">
                     <div class="col-xl-5 col-lg-6 offset-lg-6 offset-xl-7">
                         <div class="banner-content">
                             <h1 class="title">Simply <span>Profitably </span> Conveniently</h1>
+                            <span style="color: #ffffff;">Simple, fast, affordable and exciting way to create and send invitations for seminars, birthdays, wedding, church programs and more.</span>
                             <div class="button-group">
                                 <a href="{{route('register')}}" class="custom-button">Get Started Now!</a>
                             </div>

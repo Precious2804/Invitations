@@ -1,5 +1,5 @@
 <?php
-$page = 'Preview Invitations'
+$page = 'Preview Invitation Card'
 ?>
 
 @extends('layout')
@@ -55,7 +55,7 @@ $page = 'Preview Invitations'
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Share this Invitation</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Share this Invitation Card</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: 25%;">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -81,13 +81,13 @@ $page = 'Preview Invitations'
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Delete this Invitation</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Delete this Card</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: 25%;">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
-                Are you Sure you want to delete this Invitation? <br>
+                Are you Sure you want to delete this Card? <br>
                 If yes, Click "Delete", if No, click "Cancel"
             </div>
             <div class="modal-footer">

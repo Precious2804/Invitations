@@ -1,5 +1,5 @@
 <?php
-$page = 'Saved Invitations'
+$page = 'Saved Invitation Cards'
 ?>
 
 @extends('layout')
@@ -13,7 +13,7 @@ $page = 'Saved Invitations'
         <div class="col-lg-12">
             <div class="card">
                 <div class="card-header">
-                    <h6 style="text-align: center;">All Saved Invitations</h6>
+                    <h6 style="text-align: center;">All Saved Invitation Cards</h6>
                 </div>
                 <div class="card-body">
                     @if(Session::get('deleted'))

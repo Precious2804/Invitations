@@ -13,7 +13,7 @@
         <div class="col-lg-6">
             <div class="total-earning-item">
                 <div class="total-earning-heading">
-                    <h5 class="title">Explore Invitations</h5>
+                    <h5 class="title">Explore Now</h5>
                 </div>
                 <div class="d-flex flex-wrap justify-content-between">
 
@@ -27,7 +27,7 @@
         <div class="col-lg-6">
             <div class="total-earning-item">
                 <div class="total-earning-heading">
-                    <h5 class="title">Saved Invitations </h5>
+                    <h5 class="title">Saved Invitation Cards </h5>
                 </div>
                 <div class="d-flex flex-wrap justify-content-between">
 
