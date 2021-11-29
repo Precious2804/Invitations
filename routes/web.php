@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\MainController;
+use App\Models\EventType;
 use App\Models\User;
 use Illuminate\Auth\Events\PasswordReset;
 use Illuminate\Http\Request;
@@ -22,7 +23,8 @@ use Illuminate\Support\Str;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $events = ['events'=>EventType::all()];
+    return view('welcome')->with($events);
 })->name('/');
 
 
@@ -45,6 +47,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/create_invite', [MainController::class, 'create_invite'])->name('create_invite');
     Route::post('/create_now', [MainController::class, 'create_now'])->name('create_now');
     Route::post('/save_invite', [MainController::class, 'save_invite'])->name('save_invite');
+    Route::post('/upload_temp', [MainController::class, 'upload_temp'])->name('upload_temp');
     Route::get('/select_design', [MainController::class, 'select_design'])->name('select_design');
     Route::get('/all_saves', [MainController::class, 'all_saves'])->name('all_saves');
     Route::get('/delete_invite/{invite_id}', [MainController::class, 'delete_invite'])->name('delete_invite');

@@ -197,7 +197,7 @@
                     <div class="dashboard-footer">
                         <div class="d-flex flex-wrap justify-content-between m-0-15-none">
                             <div class="left">
-                                &copy; 2020 <a href="#0">{{env('APP_NAME')}}</a> | All right reserved.
+                                &copy; 2021 <a href="#">{{env('APP_NAME')}}</a> | All right reserved.
                             </div>
                         </div>
                     </div>

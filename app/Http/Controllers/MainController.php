@@ -260,9 +260,9 @@ class MainController extends Controller
 
     public function save_invite(Request $req)
     {
-        if($req->video_url){
+        if ($req->video_url) {
             $req->validate([
-                'video_url'=>'url'
+                'video_url' => 'url'
             ]);
         }
         // $req->validate([
@@ -300,7 +300,7 @@ class MainController extends Controller
             'toast' => $req->toast,
             'event_name' => $req->event_name,
             'photo' => $storePhoto,
-            'video_url'=>$req->video_url
+            'video_url' => $req->video_url
         ]);
 
         return back()->with('saved', "Invitation has been saved Successfully");
@@ -353,7 +353,30 @@ class MainController extends Controller
         if (route('create_invite')) {
             return redirect(route('create_invite') . "?template=" . $data['template'] . "&invite_id=" . $req->invite_id);
         } else {
-            return back()->with('saved', "Template design was changed Successfully");
+            return redirect()->to(route('edit_invite'));
+            // return back()->with('saved', "Template design was changed Successfully");
+        }
+    }
+
+    public function upload_temp(Request $req)
+    {
+        $req->validate([
+            'template' => 'required|mimes:png,jpg,jpeg,gif,svg|max:2048',
+        ]);
+
+        if ($req->file()) {
+            $name = time() . '_' . $req->template->getClientOriginalName();
+            $filePath = $req->file('template')->storeAs('templates', $name, 'public');
+
+            $data = Invites::where('invite_id', $req->invite_id)->first();
+            $data->template = '/storage/' . $filePath;
+            $data->save();
+
+            if (route('create_invite')) {
+                return redirect(route('create_invite') . "?template=" . $data['template'] . "&invite_id=" . $req->invite_id);
+            } else {
+                return back()->with('saved', "Template design was changed Successfully");
+            }
         }
     }
 

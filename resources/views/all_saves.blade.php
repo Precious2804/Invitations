@@ -16,6 +16,15 @@ $page = 'Saved Invitation Cards'
                     <h6 style="text-align: center;">All Saved Invitation Cards</h6>
                 </div>
                 <div class="card-body">
+                    @if($all_invites->isEmpty())
+                    <div class="row mb-30">
+                        <div class="col-lg-12">
+                            <div class="alert alert-danger" style="text-align: center;">
+                                <p>There are no saved cards for any events, related to this account!!!</p>
+                            </div>
+                        </div>
+                    </div>
+                    @else
                     @if(Session::get('deleted'))
                     <div class="alert alert-success">
                         {{Session::get('deleted')}}
@@ -49,6 +58,7 @@ $page = 'Saved Invitation Cards'
                         </div>
                         @endforeach
                     </div>
+                    @endif
                 </div>
             </div>
         </div>

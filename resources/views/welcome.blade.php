@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,15 +33,6 @@
                 <div class="loader-line-wrap">
                     <div class="loader-line"></div>
                 </div>
-                <!-- <div class="loader-line-wrap">
-                    <div class="loader-line"></div>
-                </div>
-                <div class="loader-line-wrap">
-                    <div class="loader-line"></div>
-                </div>
-                <div class="loader-line-wrap">
-                    <div class="loader-line"></div>
-                </div> -->
             </div>
         </div>
         <a href="#0" class="scrollToTop"><i class="fas fa-angle-up"></i></a>
@@ -90,9 +80,9 @@
                             <li>
                                 <a href="#about">About</a>
                             </li>
-                            <!-- <li>
-                                <a href="#feature">Features</a>
-                            </li> -->
+                            <li>
+                                <a href="#events">Events</a>
+                            </li>
                             <li>
                                 <a href="#call">Contact</a>
                             </li>
@@ -111,25 +101,12 @@
         </header>
         <!--=======Header-Section Ends Here=======-->
 
-
         <!--=======Banner-Section Starts Here=======-->
         <section class="banner-section" id="home">
             <div class="banner-bg d-lg-none">
                 <img src="assets/images/banner/banner-bg2.jpg" alt="banner">
             </div>
             <div class="banner-bg d-none d-lg-block bg_img" data-background="assets/images/01.jfif">
-                <!-- <div class="chart-1 wow fadeInLeft" data-wow-delay=".5s" data-wow-duration=".7s">
-                    <img src="assets/images/banner/chart1.png" alt="banner">
-                </div>
-                <div class="chart-2 wow fadeInDown" data-wow-delay="1s" data-wow-duration=".7s">
-                    <img src="assets/images/banner/chart2.png" alt="banner">
-                </div>
-                <div class="chart-3 wow fadeInRight" data-wow-delay="1.5s" data-wow-duration=".7s">
-                    <img src="assets/images/banner/chart3.png" alt="banner">
-                </div>
-                <div class="chart-4 wow fadeInUp" data-wow-delay="2s" data-wow-duration=".7s">
-                    <img src="assets/images/banner/clock.png" alt="banner">
-                </div> -->
             </div>
             <div class="animation-area d-none d-lg-block">
                 <div class="plot">
@@ -143,8 +120,10 @@
                 <div class="row">
                     <div class="col-xl-5 col-lg-6 offset-lg-6 offset-xl-7">
                         <div class="banner-content">
-                            <h1 class="title">Simply <span>Profitably </span> Conveniently</h1>
-                            <span style="color: #ffffff;">Simple, fast, affordable and exciting way to create and send invitations for seminars, birthdays, wedding, church programs and more.</span>
+                            <h1 class="title">Simple <span>Affordable </span> Faster</h1>
+                            <span style="color: #ffffff;">Simple, Affordable and Faster way to
+                                Create , Design, Print or send invitations online.
+                                With Auto-saving enabled.</span>
                             <div class="button-group">
                                 <a href="{{route('register')}}" class="custom-button">Get Started Now!</a>
                             </div>
@@ -174,90 +153,31 @@
                                 that is why we offer our users online design tools that allow them to customize and create beautiful invitations.
                             </p>
                         </div>
-                        <!-- <div class="about--content">
-                            <div class="about-item">
-                                <div class="about-thumb">
-                                    <img src="assets/images/about/about01.png" alt="about">
-                                </div>
-                                <div class="about-content">
-                                    <h5 class="title">Secure & Reliable</h5>
-                                    <p>
-                                        Secure assets fund for users
-                                    </p>
-                                </div>
-                            </div>
-                        </div> -->
                     </div>
                 </div>
             </div>
         </section>
         <!--=======About-Section Ends Here=======-->
+        <!--=======Events-Section Starts Here=======-->
 
-
-        <!--=======Feature-Section Starts Here=======-->
-        <!-- <section class="feature-section padding-top padding-bottom bg_img" data-background="./assets/images/feature/feature-bg.png" id="feature">
-            <div class="ball-1" data-paroller-factor="-0.30" data-paroller-factor-lg="0.60" data-paroller-type="foreground" data-paroller-direction="horizontal">
-                <img src="assets/images/balls/ball1.png" alt="balls">
-            </div>
-            <div class="ball-2" data-paroller-factor="-0.30" data-paroller-factor-lg="0.60" data-paroller-type="foreground" data-paroller-direction="horizontal">
-                <img src="assets/images/balls/ball2.png" alt="balls">
-            </div>
-            <div class="ball-3" data-paroller-factor="0.30" data-paroller-factor-lg="-0.30" data-paroller-type="foreground" data-paroller-direction="horizontal">
-                <img src="assets/images/balls/ball3.png" alt="balls">
-            </div>
+        <section class="call-section call-overlay bg_img" data-background="assets/images/04.jfif" id="events">
             <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8 col-md-10">
-                        <div class="section-header">
-                            <span class="cate">Our Amazing Features</span>
-                            <h2 class="title">
-                                why should you invest
-                            </h2>
-                            <p class="mw-100">
-                                We are worldwide investment company who are committed to the principle of revenue
-                                maximization and reduction of the financial risks at investing.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row justify-content-center feature-wrapper">
-                    <div class="col-md-6 col-sm-10 col-lg-4">
-                        <div class="feature-item">
-                            <div class="feature-thumb">
-                                <img src="assets/images/feature/feature01.png" alt="feature">
-                            </div>
-                            <div class="feature-content">
-                                <h5 class="title">Profitable Investment</h5>
-                                <p>Donec tincidunt viverra ligula non interdum. Maecenas nulla </p>
+                <h3 style="text-align: center; color:white">Create cards for the following events</h3>
+                <div class="row">
+                    @foreach($events as $item)
+                    <div class="col-lg-4" style="padding: 25px;">
+                        <div class="card">
+                            <div class="card-body">
+                                {{$item->event_name}}
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-sm-10 col-lg-4">
-                        <div class="feature-item">
-                            <div class="feature-thumb">
-                                <img src="assets/images/feature/feature02.png" alt="feature">
-                            </div>
-                            <div class="feature-content">
-                                <h5 class="title">DDS Protection</h5>
-                                <p>Donec tincidunt viverra ligula non interdum. Maecenas nulla </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-sm-10 col-lg-4">
-                        <div class="feature-item">
-                            <div class="feature-thumb">
-                                <img src="assets/images/feature/feature03.png" alt="feature">
-                            </div>
-                            <div class="feature-content">
-                                <h5 class="title">24/7 Support Center</h5>
-                                <p>Donec tincidunt viverra ligula non interdum. Maecenas nulla </p>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
-        </section> -->
-        <!--=======Feature-Section Ends Here=======-->
+        </section>
+
+        <!--=======Events-Section Ends Here=======-->
 
         <!--=======Check-Section Starts Here=======-->
         <section class="call-section call-overlay bg_img" data-background="assets/images/call/call-bg.jpg" id="call">
@@ -281,123 +201,6 @@
             </div>
         </section>
         <!--=======Check-Section Ends Here=======-->
-
-        <!--=======Check-Section Starts Here=======-->
-        <section class="client-section padding-bottom padding-top">
-            <div class="background-map">
-                <img src="assets/images/client/client-bg.png" alt="client">
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-md-10">
-                        <div class="section-header left-style">
-                            <span class="cate">TESTIMONIALS</span>
-                            <h2 class="title"><span>40,000</span> HAPPY USERS AROUND THE WORLD</h2>
-                            <p class="mw-500">
-                                We have many happy users that works with us. Some impresions from our Customers!
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xl-9">
-                        <div class="m--30">
-                            <div class="client-slider owl-carousel owl-theme">
-                                <div class="client-item">
-                                    <div class="client-content">
-                                        <p>
-                                            Perfect work to start on, support is awesome
-                                        </p>
-                                        <div class="rating">
-                                            <span>
-                                                <i class="fas fa-star"></i>
-                                            </span>
-                                            <span>
-                                                <i class="fas fa-star"></i>
-                                            </span>
-                                            <span>
-                                                <i class="fas fa-star"></i>
-                                            </span>
-                                            <span>
-                                                <i class="fas fa-star"></i>
-                                            </span>
-                                            <span>
-                                                <i class="fas fa-star-half-alt"></i>
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="client-thumb">
-                                        <a href="#0">
-                                            <img src="assets/images/client/client01.png" alt="client">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="client-item">
-                                    <div class="client-content">
-                                        <p>
-                                            Very easy to use, perfect for invest
-                                        </p>
-                                        <div class="rating">
-                                            <span>
-                                                <i class="fas fa-star"></i>
-                                            </span>
-                                            <span>
-                                                <i class="fas fa-star"></i>
-                                            </span>
-                                            <span>
-                                                <i class="fas fa-star"></i>
-                                            </span>
-                                            <span>
-                                                <i class="fas fa-star"></i>
-                                            </span>
-                                            <span>
-                                                <i class="fas fa-star-half-alt"></i>
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="client-thumb">
-                                        <a href="#0">
-                                            <img src="assets/images/client/client02.png" alt="client">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="client-item">
-                                    <div class="client-content">
-                                        <p>
-                                            Awesome {{env('APP_NAME')}} most profitable site!
-                                        </p>
-                                        <div class="rating">
-                                            <span>
-                                                <i class="fas fa-star"></i>
-                                            </span>
-                                            <span>
-                                                <i class="fas fa-star"></i>
-                                            </span>
-                                            <span>
-                                                <i class="fas fa-star"></i>
-                                            </span>
-                                            <span>
-                                                <i class="fas fa-star"></i>
-                                            </span>
-                                            <span>
-                                                <i class="fas fa-star-half-alt"></i>
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="client-thumb">
-                                        <a href="#0">
-                                            <img src="assets/images/client/client03.png" alt="client">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--=======Check-Section Ends Here=======-->
-
 
         <!-- ==========Footer-Section Starts Here========== -->
         <footer class="footer-section">
@@ -444,7 +247,7 @@
                         </a>
                     </div>
                     <ul class="links">
-                        
+
                     </ul>
                 </div>
                 <div class="footer-bottom">
@@ -479,10 +282,7 @@
             </div>
         </footer>
         <!-- ==========Footer-Section Ends Here========== -->
-
-
     </div>
-
     <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script src="assets/js/jquery-3.3.1.min.js"></script>
     <script src="assets/js/modernizr-3.6.0.min.js"></script>
