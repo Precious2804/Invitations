@@ -29,18 +29,17 @@ $page = 'Preview Invitation Card'
                                                 </a>
                                                 <button class="btn btn-success btn-sm" style="margin-bottom: 12px; margin-left:8px; width:25%; height:50%" data-toggle="modal" data-target="#exampleModal2">Share</button>
                                                 <button class="btn btn-danger btn-sm" style="margin-bottom: 12px; margin-left:8px; width:25%; height:50%" data-toggle="modal" data-target="#exampleModal">Delete</button>
-
-
-                                                @if($invite_details['event_name'] == "wedding")
-                                                @include('previews.wedding')
-                                                @elseif($invite_details['event_name'] == "birthday" || $invite_details['event_name'] == "graduation")
-                                                @include('previews.birth_grad')
-                                                @elseif($invite_details['event_name'] == "funeral")
-                                                @include('previews.funeral')
-                                                @elseif($invite_details['event_name'] == "seminar" || $invite_details['event_name'] == "conference")
-                                                @include('previews.sem_conf')
-                                                @endif
-
+                                                <div class="content">
+                                                    @if($invite_details['event_name'] == "wedding")
+                                                    @include('previews.wedding')
+                                                    @elseif($invite_details['event_name'] == "birthday" || $invite_details['event_name'] == "graduation")
+                                                    @include('previews.birth_grad')
+                                                    @elseif($invite_details['event_name'] == "funeral")
+                                                    @include('previews.funeral')
+                                                    @elseif($invite_details['event_name'] == "seminar" || $invite_details['event_name'] == "conference")
+                                                    @include('previews.sem_conf')
+                                                    @endif
+                                                </div>
                                             </div>
                         </section>
                     </main>
